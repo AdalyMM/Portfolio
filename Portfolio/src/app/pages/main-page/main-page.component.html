@@ -1,11 +1,170 @@
-<app-navbar></app-navbar>
+<!-- Extra small image screen background. -->
+<div class="upper-container-xsmall" *ngIf="breakpoints['XSmall']">
+    <div class="image-container-upper-xsmall"></div>
+</div>
+<div class="lower-container-xsmall" *ngIf="breakpoints['XSmall']">
+    <div class="image-container-lower-xsmall"></div>
+</div>
+<!-- Small image screen background. -->
+<div class="upper-container-small" *ngIf="breakpoints['Small']">
+    <div class="image-container-upper-small"></div>
+</div>
+<div class="lower-container-small" *ngIf="breakpoints['Small']">
+    <div class="image-container-lower-small"></div>
+</div>
+<!-- Medium image screen background. -->
+<div class="upper-container-medium" *ngIf="breakpoints['Medium']">
+    <div class="image-container-upper-medium"></div>
+</div>
+<div class="lower-container-medium" *ngIf="breakpoints['Medium']">
+    <div class="image-container-lower-medium"></div>
+</div>
+<!-- Large image screen background. -->
+<div class="upper-container-large" *ngIf="breakpoints['Large']">
+    <div class="image-container-upper-large"></div>
+</div>
+<div class="lower-container-large" *ngIf="breakpoints['Large']">
+    <div class="image-container-lower-large"></div>
+</div>
+<!-- Extra Large image screen background. -->
+<div class="upper-container-xlarge" *ngIf="breakpoints['XLarge']">
+    <div class="image-container-upper-xlarge"></div>
+</div>
+<div class="lower-container-xlarge" *ngIf="breakpoints['XLarge']">
+    <div class="image-container-lower-xlarge"></div>
+</div>
 <div class="wrapper">
-    <div class="container">
-        <div class="div-main-title">
-            <h1 class="main-title">Hola, soy Adaly</h1>
+    <app-navbar></app-navbar>
+    <div class="styles-container" [ngSwitch]="true">
+        <!-- Figures and other content for extra small screens. -->
+        <div class="xsmall-styles" *ngSwitchCase="breakpoints['XSmall']">
+            <div class="box-upper-triangle">
+                <div class="upper-triangle"></div>
+            </div>
+            <div class="box-lower-triangle">
+                <div class="lower-triangle"></div>
+            </div>
+            <div class="box-upper-hexagon">
+                <div class="upper-hexagon"></div>
+            </div>
+            <div class="box-little-hexagon">
+                <div class="little-hexagon"></div>
+            </div>
+            <div class="box-lower-hexagon">
+                <div class="lower-hexagon"></div>
+            </div>
+            <div class="container">
+                <div class="div-main-title">
+                    <h1 class="main-title">Hola, soy Adaly</h1>
+                </div>
+                <div class="div-main-subtitle">
+                    <h2 class="main-subtitle">Desarrollador web front-end</h2>
+                </div>
+            </div>
         </div>
-        <div class="div-main-subtitle">
-            <h2 class="main-subtitle">Desarrollador web front-end</h2>
+        <!-- Figures and other content for small screens. -->
+        <div class="small-styles" *ngSwitchCase="breakpoints['Small']">
+            <div class="box-upper-triangle">
+                <div class="upper-triangle"></div>
+            </div>
+            <div class="box-lower-triangle">
+                <div class="lower-triangle"></div>
+            </div>
+            <div class="box-upper-hexagon">
+                <div class="upper-hexagon"></div>
+            </div>
+            <div class="box-little-hexagon">
+                <div class="little-hexagon"></div>
+            </div>
+            <div class="box-lower-hexagon">
+                <div class="lower-hexagon"></div>
+            </div>
+            <div class="container">
+                <div class="div-main-title">
+                    <h1 class="main-title">Hola, soy Adaly</h1>
+                </div>
+                <div class="div-main-subtitle">
+                    <h2 class="main-subtitle">Desarrollador web front-end</h2>
+                </div>
+            </div>
         </div>
+        <!-- Figures and other content for medium screens. -->
+        <div class="medium-styles"*ngSwitchCase="breakpoints['Medium']">
+            <div class="box-upper-triangle">
+                <div class="upper-triangle"></div>
+            </div>
+            <div class="box-lower-triangle">
+                <div class="lower-triangle"></div>
+            </div>
+            <div class="box-upper-hexagon">
+                <div class="upper-hexagon"></div>
+            </div>
+            <div class="box-little-hexagon">
+                <div class="little-hexagon"></div>
+            </div>
+            <div class="box-lower-hexagon">
+                <div class="lower-hexagon"></div>
+            </div>
+            <div class="container">
+                <div class="div-main-title">
+                    <h1 class="main-title">Hola, soy Adaly</h1>
+                </div>
+                <div class="div-main-subtitle">
+                    <h2 class="main-subtitle">Desarrollador web front-end</h2>
+                </div>
+            </div>
+        </div>
+        <!-- Figures and other content for large screens. -->
+        <div class="large-styles" *ngSwitchDefault>
+            <div class="box-upper-triangle">
+                <div class="upper-triangle"></div>
+            </div>
+            <div class="box-lower-triangle">
+                <div class="lower-triangle"></div>
+            </div>
+            <div class="box-upper-hexagon">
+                <div class="upper-hexagon"></div>
+            </div>
+            <div class="box-little-hexagon">
+                <div class="little-hexagon"></div>
+            </div>
+            <div class="box-lower-hexagon">
+                <div class="lower-hexagon"></div>
+            </div>
+            <div class="container">
+                <div class="div-main-title">
+                    <h1 class="main-title">Hola, soy Adaly</h1>
+                </div>
+                <div class="div-main-subtitle">
+                    <h2 class="main-subtitle">Desarrollador web front-end</h2>
+                </div>
+            </div>
+        </div>
+        <!-- Figures and other content for large screens. --
+        <div class="xlarge-styles" *ngSwitchDefault>
+            <div class="box-upper-triangle">
+                <div class="upper-triangle"></div>
+            </div>
+            <div class="box-lower-triangle">
+                <div class="lower-triangle"></div>
+            </div>
+            <div class="box-upper-hexagon">
+                <div class="upper-hexagon"></div>
+            </div>
+            <div class="box-little-hexagon">
+                <div class="little-hexagon"></div>
+            </div>
+            <div class="box-lower-hexagon">
+                <div class="lower-hexagon"></div>
+            </div>
+            <div class="container">
+                <div class="div-main-title">
+                    <h1 class="main-title">Hola, soy Adaly</h1>
+                </div>
+                <div class="div-main-subtitle">
+                    <h2 class="main-subtitle">Desarrollador web front-end</h2>
+                </div>
+            </div>
+        </div> -->
     </div>
 </div>
