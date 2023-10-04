@@ -1,5 +1,48 @@
 <nav class="navbar">
-    <div>
-
+    <div class="xsmall-styles" *ngIf="breakpoints['XSmall']">
+        <a class="burger-menu-anchor" (click)="openLateralMenu = !openLateralMenu"><img class="burger-menu-icon" src="assets/icons/burger-menu.png"></a>
+    </div>
+    <div class="lateral-menu" *ngIf="openLateralMenu">
+        <button class="about-me-button-lateral" (click)="openLateralMenu = !openLateralMenu" [routerLink]="['about']">
+            <span><img class="info-icon" src="assets/icons/info.png"></span>
+        </button>
+        <button class="projects-button-lateral" (click)="openLateralMenu = !openLateralMenu" [routerLink]="['projects']">
+            <span><img class="project-icon" src="assets/icons/project.png"></span>
+        </button>
+        <button class="start-button-lateral" (click)="openLateralMenu = !openLateralMenu" [routerLink]="['']">
+            <span><img class="home-icon" src="assets/icons/home.png"></span>
+        </button>
+        <button class="contact-button-lateral" (click)="openLateralMenu = !openLateralMenu" [routerLink]="['contact']">
+            <span><img class="contact-icon" src="assets/icons/contact.png"></span>
+        </button>
+        <button class="cv-button-lateral">
+            <span (click)="openLateralMenu = !openLateralMenu"><img class="download-icon" src="assets/icons/download_icon.png"></span>
+        </button>
+    </div>
+    <div class="wrapper" *ngIf="breakpoints['Large'] || breakpoints['Medium']">
+        <button class="about-me-button" [routerLink]="['about']">
+            <p>Sobre mí</p>
+        </button>
+        <button class="projects-button" [routerLink]="['projects']">
+            <p>Proyectos</p>
+        </button>
+        <button class="start-button" [routerLink]="['']">
+            <svg width="100%" height="100%" viewBox="0 0 50 50.396079429636295" class="css-1j8o68f">
+                <defs id="SvgjsDefs4838"></defs>
+                <g id="SvgjsG4839" featurekey="nameFeature-0"
+                    transform="matrix(1.6979810953993797,0,0,1.6979810953993797,-0.3824947436841625,-16.979812573314756)"
+                    fill="#0d0d0d">
+                    <path
+                        d="M29.56 37.72 q0.28 0.64 -0.14 1.3 t-1.14 0.66 l-26.64 0 q-0.36 0 -0.68 -0.18 t-0.48 -0.46 q-0.44 -0.64 -0.12 -1.32 l1.24 -2.92 q0.16 -0.4 0.52 -0.64 t0.76 -0.24 l18.64 0 l-6.56 -15.68 l-5.36 12.8 q-0.16 0.4 -0.5 0.62 t-0.78 0.22 l-3.36 0 q-0.76 0 -1.2 -0.64 q-0.16 -0.28 -0.2 -0.64 t0.08 -0.68 l8.12 -19.04 q0.16 -0.4 0.5 -0.64 t0.78 -0.24 l3.84 0 q0.44 0 0.78 0.24 t0.5 0.64 z">
+                    </path>
+                </g>
+            </svg>
+        </button>
+        <button class="contact-button" [routerLink]="['contact']">
+            <p>Contacto</p>
+        </button>
+        <button class="cv-button">
+            <p><img class="download-icon" src="assets/icons/download_icon.png"> CV</p>
+        </button>
     </div>
 </nav>
