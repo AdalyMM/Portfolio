@@ -1,25 +1,25 @@
 <nav class="navbar">
     <div class="xsmall-styles" *ngIf="breakpoints['XSmall']">
-        <a class="burger-menu-anchor" (click)="openLateralMenu = !openLateralMenu"><img class="burger-menu-icon" src="assets/icons/burger-menu.png"></a>
+        <a class="burger-menu-anchor" (click)="openLateralMenu = !openLateralMenu"><img class="burger-menu-icon" src="assets/icons/square-menu.png"></a>
     </div>
     <div class="lateral-menu" *ngIf="openLateralMenu">
         <button class="about-me-button-lateral" (click)="openLateralMenu = !openLateralMenu" [routerLink]="['about']">
-            <span><img class="info-icon" src="assets/icons/info.png"></span>
+            <span><img class="info-icon" src="assets/icons/info.png"> Sobre mí</span>
         </button>
         <button class="projects-button-lateral" (click)="openLateralMenu = !openLateralMenu" [routerLink]="['projects']">
-            <span><img class="project-icon" src="assets/icons/project.png"></span>
+            <span><img class="project-icon" src="assets/icons/project.png"> Proyectos</span>
         </button>
         <button class="start-button-lateral" (click)="openLateralMenu = !openLateralMenu" [routerLink]="['']">
-            <span><img class="home-icon" src="assets/icons/home.png"></span>
+            <span><img class="home-icon" src="assets/icons/home.png"> Inicio</span>
         </button>
         <button class="contact-button-lateral" (click)="openLateralMenu = !openLateralMenu" [routerLink]="['contact']">
-            <span><img class="contact-icon" src="assets/icons/contact.png"></span>
+            <span><img class="contact-icon" src="assets/icons/contact.png"> Contacto</span>
         </button>
         <button class="cv-button-lateral">
-            <span (click)="openLateralMenu = !openLateralMenu"><img class="download-icon" src="assets/icons/download_icon.png"></span>
+            <span (click)="openLateralMenu = !openLateralMenu"><img class="download-icon" src="assets/icons/download_icon.png"> CV</span>
         </button>
     </div>
-    <div class="wrapper" *ngIf="breakpoints['Large'] || breakpoints['Medium']">
+    <div class="wrapper" *ngIf="breakpoints['Medium'] || breakpoints['Large'] || breakpoints['XLarge']">
         <button class="about-me-button" [routerLink]="['about']">
             <p>Sobre mí</p>
         </button>

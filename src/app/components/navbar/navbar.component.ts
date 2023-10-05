@@ -33,11 +33,11 @@ export class NavbarComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    if(this.breakpoints['Large']){
+    if(this.breakpoints['Medium'] || this.breakpoints['Large'] || this.breakpoints['XLarge']){
       const elemento = document.querySelector('.wrapper');
 
       gsap.from(elemento, {
-        y: -100,
+        y: -200,
         opacity: 0, 
         duration: 1, 
         ease: 'power2.out',
