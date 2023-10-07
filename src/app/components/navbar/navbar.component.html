@@ -1,5 +1,5 @@
 <nav class="navbar">
-    <div class="xsmall-styles" *ngIf="breakpoints['XSmall']">
+    <div class="xsmall-styles" *ngIf="breakpoints['XSmall'] || breakpoints['Small']">
         <a class="burger-menu-anchor" (click)="openLateralMenu = !openLateralMenu"><img class="burger-menu-icon" src="assets/icons/square-menu.png"></a>
     </div>
     <div class="lateral-menu" *ngIf="openLateralMenu">

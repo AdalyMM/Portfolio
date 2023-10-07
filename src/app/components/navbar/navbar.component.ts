@@ -30,6 +30,7 @@ export class NavbarComponent implements OnInit, AfterViewInit {
       this.breakpoints['Large'] = values[Breakpoints.Large];
       this.breakpoints['XLarge'] = values[Breakpoints.XLarge];
     });
+    console.log(this.breakpoints);
   }
 
   ngAfterViewInit(): void {

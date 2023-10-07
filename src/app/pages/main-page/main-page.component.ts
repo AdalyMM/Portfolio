@@ -29,6 +29,7 @@ export class MainPageComponent implements OnInit, AfterViewInit {
       this.breakpoints['Large'] = values[Breakpoints.Large];
       this.breakpoints['XLarge'] = values[Breakpoints.XLarge];
     });
+    console.log(this.breakpoints);
   }
 
   ngAfterViewInit() {
@@ -41,8 +42,14 @@ export class MainPageComponent implements OnInit, AfterViewInit {
     const boxLowerHexagon = document.querySelector('.box-lower-hexagon');
 
     // Animation for rotate hexagons.
-    gsap.to([boxUpperHexagon, boxLittleHexagon1, boxLittleHexagon2, boxLittleHexagon3, boxLittleHexagon4,boxLowerHexagon], {
+    gsap.to([boxUpperHexagon, boxLittleHexagon2, boxLittleHexagon4], {
       rotation: 360, // Rotate 360 degrees.
+      duration: 10,   // Animation duration in seconds.
+      repeat: -1,    // Infinite loop.
+      ease: 'linear', // Ease function for constant rotation.
+    });
+    gsap.to([boxLittleHexagon1, boxLittleHexagon3, boxLowerHexagon], {
+      rotation: -360, // Rotate 360 degrees.
       duration: 10,   // Animation duration in seconds.
       repeat: -1,    // Infinite loop.
       ease: 'linear', // Ease function for constant rotation.
