@@ -30,12 +30,22 @@ export class NavbarComponent implements OnInit, AfterViewInit {
       this.breakpoints['Large'] = values[Breakpoints.Large];
       this.breakpoints['XLarge'] = values[Breakpoints.XLarge];
     });
-    console.log(this.breakpoints);
   }
 
   ngAfterViewInit(): void {
     if(this.breakpoints['Medium'] || this.breakpoints['Large'] || this.breakpoints['XLarge']){
       const elemento = document.querySelector('.wrapper');
+
+      gsap.from(elemento, {
+        y: -200,
+        opacity: 0, 
+        duration: 1, 
+        ease: 'power2.out',
+      });
+    }
+
+    if(this.breakpoints['XSmall'] || this.breakpoints['Small']){
+      const elemento = document.querySelector('.burger-menu-icon');
 
       gsap.from(elemento, {
         y: -200,

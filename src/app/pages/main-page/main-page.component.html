@@ -1,176 +1,197 @@
-<!-- Extra small image screen background. -->
-<div class="upper-container-xsmall" *ngIf="breakpoints['XSmall']">
-    <div class="image-container-upper-xsmall"></div>
-</div>
-<div class="lower-container-xsmall" *ngIf="breakpoints['XSmall']">
-    <div class="image-container-lower-xsmall"></div>
-</div>
-<!-- Small image screen background. -->
-<div class="upper-container-small" *ngIf="breakpoints['Small']">
-    <div class="image-container-upper-small"></div>
-</div>
-<div class="lower-container-small" *ngIf="breakpoints['Small']">
-    <div class="image-container-lower-small"></div>
-</div>
-<!-- Medium image screen background. -->
-<div class="upper-container-medium" *ngIf="breakpoints['Medium']">
-    <div class="image-container-upper-medium"></div>
-</div>
-<div class="lower-container-medium" *ngIf="breakpoints['Medium']">
-    <div class="image-container-lower-medium"></div>
-</div>
-<!-- Large image screen background. -->
-<div class="upper-container-large" *ngIf="breakpoints['Large']">
-    <div class="image-container-upper-large"></div>
-</div>
-<div class="lower-container-large" *ngIf="breakpoints['Large']">
-    <div class="image-container-lower-large"></div>
-</div>
-<!-- Extra Large image screen background. -->
-<div class="upper-container-xlarge" *ngIf="breakpoints['XLarge']">
-    <div class="image-container-upper-xlarge"></div>
-</div>
-<div class="lower-container-xlarge" *ngIf="breakpoints['XLarge']">
-    <div class="image-container-lower-xlarge"></div>
-</div>
-<div class="wrapper">
-    <div class="styles-container" [ngSwitch]="true">
-        <!-- Figures and other content for extra small screens. -->
-        <div class="xsmall-styles" *ngSwitchCase="breakpoints['XSmall']">
-            <div class="box-upper-triangle">
-                <div class="upper-triangle"></div>
-            </div>
-            <div class="box-lower-triangle">
-                <div class="lower-triangle"></div>
-            </div>
-            <div class="box-upper-hexagon">
-                <div class="upper-hexagon"></div>
-            </div>
-            <div class="box-little-hexagon-1">
-                <div class="little-hexagon-1"></div>
-            </div>
-            <div class="box-little-hexagon-2">
-                <div class="little-hexagon-2"></div>
-            </div>
-            <div class="box-little-hexagon-3">
-                <div class="little-hexagon-3"></div>
-            </div>
-            <div class="box-little-hexagon-4">
-                <div class="little-hexagon-4"></div>
-            </div>
-            <div class="box-lower-hexagon">
-                <div class="lower-hexagon"></div>
-            </div>
-            <div class="container">
-                <div class="div-main-title">
-                    <h1 class="main-title">Hola, soy Adaly</h1>
-                </div>
-                <div class="div-main-subtitle">
-                    <h2 class="main-subtitle">Desarrollador web front-end</h2>
-                </div>
-            </div>
+<div class="general-container">
+    <div class="background-container-xsmall" *ngIf="breakpoints['XSmall']">
+        <div class="corner-upper-form">
+            <img src="assets/images/corner-form.png">
         </div>
-        <!-- Figures and other content for small screens. -->
-        <div class="small-styles" *ngSwitchCase="breakpoints['Small']">
-            <div class="box-upper-triangle">
-                <div class="upper-triangle"></div>
-            </div>
-            <div class="box-lower-triangle">
-                <div class="lower-triangle"></div>
-            </div>
-            <div class="box-upper-hexagon">
-                <div class="upper-hexagon"></div>
-            </div>
-            <div class="box-little-hexagon-1">
-                <div class="little-hexagon-1"></div>
-            </div>
-            <div class="box-little-hexagon-2">
-                <div class="little-hexagon-2"></div>
-            </div>
-            <div class="box-little-hexagon-3">
-                <div class="little-hexagon-3"></div>
-            </div>
-            <div class="box-little-hexagon-4">
-                <div class="little-hexagon-4"></div>
-            </div>
-            <div class="box-lower-hexagon">
-                <div class="lower-hexagon"></div>
-            </div>
-            <div class="container">
-                <div class="div-main-title">
-                    <h1 class="main-title">Hola, soy Adaly</h1>
-                </div>
-                <div class="div-main-subtitle">
-                    <h2 class="main-subtitle">Desarrollador web front-end</h2>
-                </div>
-            </div>
+        <div class="corner-upper-contour">
+            <img src="assets/images/corner-contour.png">
         </div>
-        <!-- Figures and other content for medium screens. -->
-        <div class="medium-styles"*ngSwitchCase="breakpoints['Medium']">
-            <div class="box-upper-triangle">
-                <div class="upper-triangle"></div>
-            </div>
-            <div class="box-lower-triangle">
-                <div class="lower-triangle"></div>
-            </div>
-            <div class="box-upper-hexagon">
-                <div class="upper-hexagon"></div>
-            </div>
-            <div class="box-little-hexagon-1">
-                <div class="little-hexagon-1"></div>
-            </div>
-            <div class="box-little-hexagon-3">
-                <div class="little-hexagon-3"></div>
-            </div>
-            <div class="box-little-hexagon-4">
-                <div class="little-hexagon-4"></div>
-            </div>
-            <div class="box-lower-hexagon">
-                <div class="lower-hexagon"></div>
-            </div>
-            <div class="container">
-                <div class="div-main-title">
-                    <h1 class="main-title">Hola, soy Adaly</h1>
-                </div>
-                <div class="div-main-subtitle">
-                    <h2 class="main-subtitle">Desarrollador web front-end</h2>
-                </div>
-            </div>
+        <div class="upper-big-bubble">
+            <img src="assets/images/bubble.png">
         </div>
-        <!-- Figures and other content for large screens. -->
-        <div class="large-styles" *ngSwitchDefault>
-            <div class="box-upper-triangle">
-                <div class="upper-triangle"></div>
-            </div>
-            <div class="box-lower-triangle">
-                <div class="lower-triangle"></div>
-            </div>
-            <div class="box-upper-hexagon">
-                <div class="upper-hexagon"></div>
-            </div>
-            <div class="box-little-hexagon-1">
-                <div class="little-hexagon-1"></div>
-            </div>
-            <div class="box-little-hexagon-2">
-                <div class="little-hexagon-2"></div>
-            </div>
-            <div class="box-little-hexagon-3">
-                <div class="little-hexagon-3"></div>
-            </div>
-            <div class="box-little-hexagon-4">
-                <div class="little-hexagon-4"></div>
-            </div>
-            <div class="box-lower-hexagon">
-                <div class="lower-hexagon"></div>
-            </div>
-            <div class="container">
-                <div class="div-main-title">
-                    <h1 class="main-title">Hola, soy Adaly</h1>
-                </div>
-                <div class="div-main-subtitle">
-                    <h2 class="main-subtitle">Desarrollador web front-end</h2>
-                </div>
-            </div>
+        <div class="upper-little-bubble">
+            <img src="assets/images/bubble.png">
+        </div>
+        <div class="center-form">
+            <img src="assets/images/center-form.png">
+        </div>
+        <div class="lower-big-bubble">
+            <img src="assets/images/bubble.png">
+        </div>
+        <div class="lower-little-bubble">
+            <img src="assets/images/bubble.png">
+        </div>
+        <div class="corner-lower-contour">
+            <img src="assets/images/corner-contour.png">
+        </div>
+        <div class="corner-lower-form">
+            <img class="corner-lower-form-img" src="assets/images/corner-form.png">
         </div>
     </div>
-</div>
+    <div class="wrapper-xsmall" *ngIf="breakpoints['XSmall']">
+        <div class="main-title">
+            <span class="span-1">HOLA, </span>
+            <span class="span-2">SOY </span>
+            <span class="span-3">ADALY</span>
+        </div>
+        <div class="main-subtitle">
+            <span>DESARROLLADOR WEB FRONT-END</span>
+        </div>
+    </div>
+    <div class="background-container-small" *ngIf="breakpoints['Small']">
+        <div class="corner-upper-form">
+            <img src="assets/images/corner-form.png">
+        </div>
+        <div class="corner-upper-contour">
+            <img src="assets/images/corner-contour.png">
+        </div>
+        <div class="upper-big-bubble">
+            <img src="assets/images/bubble.png">
+        </div>
+        <div class="upper-little-bubble">
+            <img src="assets/images/bubble.png">
+        </div>
+        <div class="center-form">
+            <img src="assets/images/center-form.png">
+        </div>
+        <div class="lower-big-bubble">
+            <img src="assets/images/bubble.png">
+        </div>
+        <div class="lower-little-bubble">
+            <img src="assets/images/bubble.png">
+        </div>
+        <div class="corner-lower-contour">
+            <img src="assets/images/corner-contour.png">
+        </div>
+        <div class="corner-lower-form">
+            <img class="corner-lower-form-img" src="assets/images/corner-form.png">
+        </div>
+    </div>
+    <div class="wrapper-small" *ngIf="breakpoints['Small']">
+        <div class="main-title">
+            <span class="span-1">HOLA, </span>
+            <span class="span-2">SOY </span>
+            <span class="span-3">ADALY</span>
+        </div>
+        <div class="main-subtitle">
+            <span>DESARROLLADOR WEB FRONT-END</span>
+        </div>
+    </div>
+    <div class="background-container-medium" *ngIf="breakpoints['Medium']">
+        <div class="corner-upper-form">
+            <img src="assets/images/corner-form.png">
+        </div>
+        <div class="corner-upper-contour">
+            <img src="assets/images/corner-contour.png">
+        </div>
+        <div class="upper-big-bubble">
+            <img src="assets/images/bubble.png">
+        </div>
+        <div class="upper-little-bubble">
+            <img src="assets/images/bubble.png">
+        </div>
+        <div class="center-form">
+            <img src="assets/images/center-form.png">
+        </div>
+        <div class="lower-big-bubble">
+            <img src="assets/images/bubble.png">
+        </div>
+        <div class="lower-little-bubble">
+            <img src="assets/images/bubble.png">
+        </div>
+        <div class="corner-lower-contour">
+            <img src="assets/images/corner-contour.png">
+        </div>
+        <div class="corner-lower-form">
+            <img class="corner-lower-form-img" src="assets/images/corner-form.png">
+        </div>
+    </div>
+    <div class="wrapper-medium" *ngIf="breakpoints['Medium']">
+        <div class="main-title">
+            <span class="span-1">HOLA, </span>
+            <span class="span-2">SOY </span>
+            <span class="span-3">ADALY</span>
+        </div>
+        <div class="main-subtitle">
+            <span>DESARROLLADOR WEB FRONT-END</span>
+        </div>
+    </div>
+    <div class="background-container-large" *ngIf="breakpoints['Large']">
+        <div class="corner-upper-form">
+            <img src="assets/images/corner-form.png">
+        </div>
+        <div class="corner-upper-contour">
+            <img src="assets/images/corner-contour.png">
+        </div>
+        <div class="upper-big-bubble">
+            <img src="assets/images/bubble.png">
+        </div>
+        <div class="upper-little-bubble">
+            <img src="assets/images/bubble.png">
+        </div>
+        <div class="center-form">
+            <img src="assets/images/center-form.png">
+        </div>
+        <div class="lower-big-bubble">
+            <img src="assets/images/bubble.png">
+        </div>
+        <div class="lower-little-bubble">
+            <img src="assets/images/bubble.png">
+        </div>
+        <div class="corner-lower-contour">
+            <img src="assets/images/corner-contour.png">
+        </div>
+        <div class="corner-lower-form">
+            <img class="corner-lower-form-img" src="assets/images/corner-form.png">
+        </div>
+    </div>
+    <div class="wrapper-large" *ngIf="breakpoints['Large']">
+        <div class="main-title">
+            <span class="span-1">HOLA, </span>
+            <span class="span-2">SOY </span>
+            <span class="span-3">ADALY</span>
+        </div>
+        <div class="main-subtitle">
+            <span>DESARROLLADOR WEB FRONT-END</span>
+        </div>
+    </div>
+    <div class="background-container-xlarge" *ngIf="breakpoints['XLarge']">
+        <div class="corner-upper-form">
+            <img src="assets/images/corner-form.png">
+        </div>
+        <div class="corner-upper-contour">
+            <img src="assets/images/corner-contour.png">
+        </div>
+        <div class="upper-big-bubble">
+            <img src="assets/images/bubble.png">
+        </div>
+        <div class="upper-little-bubble">
+            <img src="assets/images/bubble.png">
+        </div>
+        <div class="center-form">
+            <img src="assets/images/center-form.png">
+        </div>
+        <div class="lower-big-bubble">
+            <img src="assets/images/bubble.png">
+        </div>
+        <div class="lower-little-bubble">
+            <img src="assets/images/bubble.png">
+        </div>
+        <div class="corner-lower-contour">
+            <img src="assets/images/corner-contour.png">
+        </div>
+        <div class="corner-lower-form">
+            <img class="corner-lower-form-img" src="assets/images/corner-form.png">
+        </div>
+    </div>
+    <div class="wrapper-xlarge" *ngIf="breakpoints['XLarge']">
+        <div class="main-title">
+            <span class="span-1">HOLA, </span>
+            <span class="span-2">SOY </span>
+            <span class="span-3">ADALY</span>
+        </div>
+        <div class="main-subtitle">
+            <span>DESARROLLADOR WEB FRONT-END</span>
+        </div>
+    </div>
+</div> 
