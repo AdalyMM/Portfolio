@@ -19,8 +19,7 @@ export class MainPageComponent implements OnInit, AfterViewInit {
 
   constructor(
     private sharedDataService: SharedDataService,
-    private elementRef: ElementRef,
-    private renderer: Renderer2) { }
+    private elementRef: ElementRef) { }
 
   ngOnInit() {
     this.sharedDataService.currentBreakpoints.subscribe((values) => {
