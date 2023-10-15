@@ -345,6 +345,11 @@ export class AboutMePageComponent implements OnInit, AfterViewInit {
           });
         },
       });
+      gsap.from(armRobotContainer, {
+        y: '500px',
+        opacity: 1,
+        duration: 1
+      });
     }
   }
 }
