@@ -40,12 +40,12 @@ export class NavbarComponent implements OnInit, AfterViewInit, OnDestroy {
 
   ngAfterViewInit(): void {
     this.images = [
-      '/assets/icons/contact.png',
-      '/assets/icons/download_icon.png',
-      '/assets/icons/home.png',
-      '/assets/icons/info.png',
-      '/assets/icons/project.png',
-      '/assets/icons/square-menu.png',
+      '../../../assets/icons/contact.png',
+      '../../../assets/icons/download_icon.png',
+      '../../../assets/icons/home.png',
+      '../../../assets/icons/info.png',
+      '../../../assets/icons/project.png',
+      '../../../assets/icons/square-menu.png',
     ];
     this.imagePreloadService.preloadImages(this.images).then(() => {
       this.animations();

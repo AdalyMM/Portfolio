@@ -17,7 +17,7 @@ export class ImagePreloadService {
         .get(url, { responseType: 'blob' })
         .toPromise()
         .then(() => {
-          console.log('Imagen precargada con éxito:', url);
+          
         })
         .catch((error) => {
           console.error('Error al precargar la imagen:', url, error);
@@ -32,8 +32,6 @@ export class ImagePreloadService {
   cancelPreload(url: string): void {
     const activeRequest = this.activeRequests.get(url);
     if (activeRequest) {
-      console.log('Solicitud de precarga cancelada:', url);
-      // Puedes hacer algo más aquí, como cancelar la solicitud o realizar otras acciones de limpieza.
       this.activeRequests.delete(url);
     }
   }

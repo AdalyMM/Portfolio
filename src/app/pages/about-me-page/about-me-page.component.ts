@@ -35,18 +35,17 @@ export class AboutMePageComponent implements OnInit, AfterViewInit, OnDestroy {
       this.breakpoints['Large'] = values[Breakpoints.Large];
       this.breakpoints['XLarge'] = values[Breakpoints.XLarge];
     }));
-    console.log(this.breakpoints);
   }
 
   ngAfterViewInit(): void {
     this.images = [
-      '/assets/images/about-background.png',
-      '/assets/images/arm-robot.png',
-      '/assets/icons/AngularIcon.png',
-      '/assets/icons/CSSIcon.png',
-      '/assets/icons/GITIcon.png',
-      '/assets/icons/HTMLIcon.png',
-      '/assets/icons/TypescriptIcon.png'
+      '../../../assets/images/about-background.png',
+      '../../../assets/images/arm-robot.png',
+      '../../../assets/icons/AngularIcon.png',
+      '../../../assets/icons/CSSIcon.png',
+      '../../../assets/icons/GITIcon.png',
+      '../../../assets/icons/HTMLIcon.png',
+      '../../../assets/icons/TypescriptIcon.png'
     ];
     this.imagePreloadService.preloadImages(this.images).then(() => {
       this.animations();

@@ -39,10 +39,10 @@ export class MainPageComponent implements OnInit, AfterViewInit, OnDestroy {
 
   ngAfterViewInit() {
     this.images = [
-      '/assets/images/bubble.png',
-      '/assets/images/center-form.png',
-      '/assets/images/corner-contour.png',
-      '/assets/images/corner-form.png'
+      '../../../assets/images/bubble.png',
+      '../../../assets/images/center-form.png',
+      '../../../assets/images/corner-contour.png',
+      '../../../assets/images/corner-form.png'
     ];
     this.imagePreloadService.preloadImages(this.images).then(() => {
       this.animations();
