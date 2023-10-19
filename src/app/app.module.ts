@@ -9,6 +9,7 @@ import { MainPageComponent } from './pages/main-page/main-page.component';
 import { AboutMePageComponent } from './pages/about-me-page/about-me-page.component';
 import { ProjectsPageComponent } from './pages/projects-page/projects-page.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { ContactPageComponent } from './pages/contact-page/contact-page.componen
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     RouterModule.forRoot([])
   ],
   providers: [],

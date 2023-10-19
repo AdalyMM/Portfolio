@@ -1,14 +1,16 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit, OnDestroy } from '@angular/core';
 import { SharedDataService } from 'src/app/services/shared-data.service';
 import { Breakpoints } from '@angular/cdk/layout';
 import { gsap } from 'gsap';
+import { ImagePreloadService } from 'src/app/services/image-preload.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-about-me-page',
   templateUrl: './about-me-page.component.html',
   styleUrls: ['./about-me-page.component.sass']
 })
-export class AboutMePageComponent implements OnInit, AfterViewInit {
+export class AboutMePageComponent implements OnInit, AfterViewInit, OnDestroy {
   breakpoints: { [key: string]: boolean } = {
     XSmall: false,
     Small: false,
@@ -16,23 +18,52 @@ export class AboutMePageComponent implements OnInit, AfterViewInit {
     Large: false,
     XLarge: false,
   };
+  suscriptions: Subscription[] = [];
+  private images: string[] = [];
+  gsapAnimations: any[] = [];
 
   constructor(
-    private sharedDataService: SharedDataService
+    private sharedDataService: SharedDataService,
+    private imagePreloadService: ImagePreloadService
   ) { }
 
   ngOnInit(): void {
-    this.sharedDataService.currentBreakpoints.subscribe((values) => {
+    this.suscriptions.push(this.sharedDataService.currentBreakpoints.subscribe((values) => {
       this.breakpoints['XSmall'] = values[Breakpoints.XSmall];
       this.breakpoints['Small'] = values[Breakpoints.Small];
       this.breakpoints['Medium'] = values[Breakpoints.Medium];
       this.breakpoints['Large'] = values[Breakpoints.Large];
       this.breakpoints['XLarge'] = values[Breakpoints.XLarge];
-    });
+    }));
     console.log(this.breakpoints);
   }
 
   ngAfterViewInit(): void {
+    this.images = [
+      '/assets/images/about-background.png',
+      '/assets/images/arm-robot.png',
+      '/assets/icons/AngularIcon.png',
+      '/assets/icons/CSSIcon.png',
+      '/assets/icons/GITIcon.png',
+      '/assets/icons/HTMLIcon.png',
+      '/assets/icons/TypescriptIcon.png'
+    ];
+    this.imagePreloadService.preloadImages(this.images).then(() => {
+      this.animations();
+    });
+  }
+
+  ngOnDestroy(): void {
+    this.suscriptions.forEach(suscription => {
+      suscription.unsubscribe();
+    });
+    this.gsapAnimations.forEach(animation => animation.kill());
+    this.images.forEach((url) => {
+      this.imagePreloadService.cancelPreload(url);
+    });
+  }
+
+  animations(): void {
     var tl = gsap.timeline({ repeat: 0, repeatDelay: 0 });
     //Text box
     const infoContainer = document.querySelector('.info-container');
@@ -60,269 +91,270 @@ export class AboutMePageComponent implements OnInit, AfterViewInit {
       gitInfoContainerSpan]
 
     //Animation for the text box.
-    gsap.to(infoContainer, {
+    this.gsapAnimations.push(gsap.to(infoContainer, {
       scale: 1.5,
       yoyo: true,
       repeat: 1,
       duration: 0.2,
       ease: 'power1.inOut',
       onComplete: () => {
-        gsap.to(infoContainer, {
+        this.gsapAnimations.push(gsap.to(infoContainer, {
           scale: 1.1,
           yoyo: true,
           repeat: 1,
           duration: 0.2,
           ease: 'power1.inOut'
-        });
+        }));
       }
-    });
+    }));
     if (this.breakpoints['XSmall'] || this.breakpoints['Small']) {
-      tl.from(armRobotContainer, {
+      //Animations in little screens.
+      this.gsapAnimations.push(tl.from(armRobotContainer, {
         y: '500px',
         opacity: 1,
         duration: 1
-      });
-      tl.from(allElements, {
+      }));
+      this.gsapAnimations.push(tl.from(allElements, {
         y: '800px',
         opacity: 0,
         duration: 1
-      });
+      }));
     }
     else {
       //Animation for the elements in Angular container.
-      tl.to(angularInfoContainerImage, {
+      this.gsapAnimations.push(tl.to(angularInfoContainerImage, {
         scale: 1.5,
         opacity: 1,
         duration: 0.25,
         onComplete: () => {
           // Al completar la animación, establecer la escala a 1.1 y la opacidad a 1
-          gsap.to(angularInfoContainerImage, {
+          this.gsapAnimations.push(gsap.to(angularInfoContainerImage, {
             scale: 1,
             opacity: 1,
             duration: 0.5,
             onComplete: () => {
               // Al completar la animación, establecer la escala a 1.1 y la opacidad a 1
-              gsap.to(angularInfoContainerImage, {
+              this.gsapAnimations.push(gsap.to(angularInfoContainerImage, {
                 scale: 1.1,
                 opacity: 1,
                 duration: 0.25,
                 repeat: 1,
                 yoyo: true,
                 ease: 'power1.inOut'
-              });
+              }));
             },
-          });
+          }));
         },
-      });
-      tl.to(angularInfoContainerSpan, {
+      }));
+      this.gsapAnimations.push(tl.to(angularInfoContainerSpan, {
         scale: 1.5,
         opacity: 1,
         duration: 0.25,
         onComplete: () => {
           // Al completar la animación, establecer la escala a 1.1 y la opacidad a 1
-          gsap.to(angularInfoContainerSpan, {
+          this.gsapAnimations.push(gsap.to(angularInfoContainerSpan, {
             scale: 1,
             opacity: 1,
             duration: 0.5,
             onComplete: () => {
               // Al completar la animación, establecer la escala a 1.1 y la opacidad a 1
-              gsap.to(angularInfoContainerSpan, {
+              this.gsapAnimations.push(gsap.to(angularInfoContainerSpan, {
                 scale: 1.1,
                 opacity: 1,
                 duration: 0.25,
                 repeat: 1,
                 yoyo: true,
                 ease: 'power1.inOut'
-              });
+              }));
             },
-          });
+          }));
         },
-      });
+      }));
       //Animation for the elements in Typescript container.
-      tl.to(typescriptInfoContainerImage, {
+      this.gsapAnimations.push(tl.to(typescriptInfoContainerImage, {
         scale: 1.5,
         opacity: 1,
         duration: 0.25,
         onComplete: () => {
           // Al completar la animación, establecer la escala a 1.1 y la opacidad a 1
-          gsap.to(typescriptInfoContainerImage, {
+          this.gsapAnimations.push(gsap.to(typescriptInfoContainerImage, {
             scale: 1,
             opacity: 1,
             duration: 0.5,
             onComplete: () => {
               // Al completar la animación, establecer la escala a 1.1 y la opacidad a 1
-              gsap.to(typescriptInfoContainerImage, {
+              this.gsapAnimations.push(gsap.to(typescriptInfoContainerImage, {
                 scale: 1.1,
                 opacity: 1,
                 duration: 0.25,
                 repeat: 1,
                 yoyo: true,
                 ease: 'power1.inOut'
-              });
+              }));
             },
-          });
+          }));
         },
-      });
-      tl.to(typescriptInfoContainerSpan, {
+      }));
+      this.gsapAnimations.push(tl.to(typescriptInfoContainerSpan, {
         scale: 1.5,
         opacity: 1,
         duration: 0.25,
         onComplete: () => {
           // Al completar la animación, establecer la escala a 1.1 y la opacidad a 1
-          gsap.to(typescriptInfoContainerSpan, {
+          this.gsapAnimations.push(gsap.to(typescriptInfoContainerSpan, {
             scale: 1,
             opacity: 1,
             duration: 0.5,
             onComplete: () => {
               // Al completar la animación, establecer la escala a 1.1 y la opacidad a 1
-              gsap.to(typescriptInfoContainerSpan, {
+              this.gsapAnimations.push(gsap.to(typescriptInfoContainerSpan, {
                 scale: 1.1,
                 opacity: 1,
                 duration: 0.25,
                 repeat: 1,
                 yoyo: true,
                 ease: 'power1.inOut'
-              });
+              }));
             },
-          });
+          }));
         },
-      });
+      }));
       //Animation for the elements in CSS3 container.
-      tl.to(css3InfoContainerImage, {
+      this.gsapAnimations.push(tl.to(css3InfoContainerImage, {
         scale: 1.5,
         opacity: 1,
         duration: 0.25,
         onComplete: () => {
           // Al completar la animación, establecer la escala a 1.1 y la opacidad a 1
-          gsap.to(css3InfoContainerImage, {
+          this.gsapAnimations.push(gsap.to(css3InfoContainerImage, {
             scale: 1,
             opacity: 1,
             duration: 0.5,
             onComplete: () => {
               // Al completar la animación, establecer la escala a 1.1 y la opacidad a 1
-              gsap.to(css3InfoContainerImage, {
+              this.gsapAnimations.push(gsap.to(css3InfoContainerImage, {
                 scale: 1.1,
                 opacity: 1,
                 duration: 0.25,
                 repeat: 1,
                 yoyo: true,
                 ease: 'power1.inOut'
-              });
+              }));
             },
-          });
+          }));
         },
-      });
-      tl.to(css3InfoContainerSpan, {
+      }));
+      this.gsapAnimations.push(tl.to(css3InfoContainerSpan, {
         scale: 1.5,
         opacity: 1,
         duration: 0.25,
         onComplete: () => {
           // Al completar la animación, establecer la escala a 1.1 y la opacidad a 1
-          gsap.to(css3InfoContainerSpan, {
+          this.gsapAnimations.push(gsap.to(css3InfoContainerSpan, {
             scale: 1,
             opacity: 1,
             duration: 0.5,
             onComplete: () => {
               // Al completar la animación, establecer la escala a 1.1 y la opacidad a 1
-              gsap.to(css3InfoContainerSpan, {
+              this.gsapAnimations.push(gsap.to(css3InfoContainerSpan, {
                 scale: 1.1,
                 opacity: 1,
                 duration: 0.25,
                 repeat: 1,
                 yoyo: true,
                 ease: 'power1.inOut'
-              });
+              }));
             },
-          });
+          }));
         },
-      });
+      }));
       //Animation for the elements in HTML5 container.
-      tl.to(html5InfoContainerImage, {
+      this.gsapAnimations.push(tl.to(html5InfoContainerImage, {
         scale: 1.5,
         opacity: 1,
         duration: 0.25,
         onComplete: () => {
           // Al completar la animación, establecer la escala a 1.1 y la opacidad a 1
-          gsap.to(html5InfoContainerImage, {
+          this.gsapAnimations.push(gsap.to(html5InfoContainerImage, {
             scale: 1,
             opacity: 1,
             duration: 0.5,
             onComplete: () => {
               // Al completar la animación, establecer la escala a 1.1 y la opacidad a 1
-              gsap.to(html5InfoContainerImage, {
+              this.gsapAnimations.push(gsap.to(html5InfoContainerImage, {
                 scale: 1.1,
                 opacity: 1,
                 duration: 0.25,
                 repeat: 1,
                 yoyo: true,
                 ease: 'power1.inOut'
-              });
+              }));
             },
-          });
+          }));
         },
-      });
-      tl.to(html5InfoContainerSpan, {
+      }));
+      this.gsapAnimations.push(tl.to(html5InfoContainerSpan, {
         scale: 1.5,
         opacity: 1,
         duration: 0.25,
         onComplete: () => {
           // Al completar la animación, establecer la escala a 1.1 y la opacidad a 1
-          gsap.to(html5InfoContainerSpan, {
+          this.gsapAnimations.push(gsap.to(html5InfoContainerSpan, {
             scale: 1,
             opacity: 1,
             duration: 0.5,
             onComplete: () => {
               // Al completar la animación, establecer la escala a 1.1 y la opacidad a 1
-              gsap.to(html5InfoContainerSpan, {
+              this.gsapAnimations.push(gsap.to(html5InfoContainerSpan, {
                 scale: 1.1,
                 opacity: 1,
                 duration: 0.25,
                 repeat: 1,
                 yoyo: true,
                 ease: 'power1.inOut'
-              });
+              }));
             },
-          });
+          }));
         },
-      });
+      }));
       //Animation for the elements in git container.
-      tl.to(gitInfoContainerImage, {
+      this.gsapAnimations.push(tl.to(gitInfoContainerImage, {
         scale: 1.5,
         opacity: 1,
         duration: 0.25,
         onComplete: () => {
           // Al completar la animación, establecer la escala a 1.1 y la opacidad a 1
-          gsap.to(gitInfoContainerImage, {
+          this.gsapAnimations.push(gsap.to(gitInfoContainerImage, {
             scale: 1,
             opacity: 1,
             duration: 0.5,
             onComplete: () => {
               // Al completar la animación, establecer la escala a 1.1 y la opacidad a 1
-              gsap.to(gitInfoContainerImage, {
+              this.gsapAnimations.push(gsap.to(gitInfoContainerImage, {
                 scale: 1.1,
                 opacity: 1,
                 duration: 0.25,
                 repeat: 1,
                 yoyo: true,
                 ease: 'power1.inOut'
-              });
+              }));
             },
-          });
+          }));
         },
-      });
-      tl.to(gitInfoContainerSpan, {
+      }));
+      this.gsapAnimations.push(tl.to(gitInfoContainerSpan, {
         scale: 1.5,
         opacity: 1,
         duration: 0.25,
         onComplete: () => {
           // Al completar la animación, establecer la escala a 1.1 y la opacidad a 1
-          gsap.to(gitInfoContainerSpan, {
+          this.gsapAnimations.push(gsap.to(gitInfoContainerSpan, {
             scale: 1,
             opacity: 1,
             duration: 0.5,
             onComplete: () => {
               // Al completar la animación, establecer la escala a 1.1 y la opacidad a 1
-              gsap.to(gitInfoContainerSpan, {
+              this.gsapAnimations.push(gsap.to(gitInfoContainerSpan, {
                 scale: 1.1,
                 opacity: 1,
                 duration: 0.25,
@@ -330,26 +362,25 @@ export class AboutMePageComponent implements OnInit, AfterViewInit {
                 yoyo: true,
                 ease: 'power1.inOut',
                 onComplete: () => {
-                  gsap.to(gitInfoContainerSpan, {
+                  this.gsapAnimations.push(gsap.to(gitInfoContainerSpan, {
                     scale: 1.1,
                     opacity: 1,
                     duration: 0.25,
                     repeat: 1,
                     yoyo: true,
                     ease: 'power1.inOut',
-                  });
-                  //tl.pause();
+                  }));
                 }
-              });
+              }));
             },
-          });
+          }));
         },
-      });
-      gsap.from(armRobotContainer, {
+      }));
+      this.gsapAnimations.push(gsap.from(armRobotContainer, {
         y: '500px',
         opacity: 1,
         duration: 1
-      });
+      }));
     }
   }
 }
