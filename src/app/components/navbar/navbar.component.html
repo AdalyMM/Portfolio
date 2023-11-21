@@ -16,7 +16,7 @@
             <span><img class="contact-icon" src="assets/icons/contact.png"> Contacto</span>
         </button>
         <button class="cv-button-lateral">
-            <span (click)="openLateralMenu = !openLateralMenu"><img class="download-icon" src="assets/icons/download_icon.png"> CV</span>
+            <span (click)="openLateralMenu = !openLateralMenu; openCV()"><img class="download-icon" src="assets/icons/download_icon.png"> CV</span>
         </button>
     </div>
     <div class="wrapper" *ngIf="breakpoints['Medium'] || breakpoints['Large'] || breakpoints['XLarge']">
@@ -42,7 +42,7 @@
             <p>Contacto</p>
         </button>
         <button class="cv-button">
-            <p><img class="download-icon" src="assets/icons/download_icon.png"> CV</p>
+            <p><img class="download-icon" src="assets/icons/download_icon.png" (click)="openCV()"> CV</p>
         </button>
     </div>
 </nav>

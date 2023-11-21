@@ -17,9 +17,9 @@
       <div class="projects-info-box">
         <div class="projects">
           <div class="project" *ngFor="let project of projects; let i = index"
-            [ngClass]="{ 'active': i === currentIndex }">
+            [ngClass]="{ 'active': i === currentIndex }" (click)="openDialog(i)">
             <img src="{{ project.image }}">
-            <div [ngClass]="'project-info ' + 'project' + i">{{ project.info }}</div>
+            <div [ngClass]="'project-info project' + i">{{ project.info }}</div>
           </div>
         </div>
       </div>
@@ -55,9 +55,9 @@
       </div>
       <div class="projects-info-box">
         <div class="projects">
-          <div class="project" *ngFor="let project of projects; let i = index">
+          <div class="project" *ngFor="let project of projects; let i = index" (click)="openDialog(i)">
             <img src="{{ project.image }}">
-            <div [ngClass]="'project-info ' + 'project' + i">{{ project.info }}</div>
+            <div [ngClass]="'project-info project' + i">{{ project.info }}</div>
           </div>
         </div>
       </div>
@@ -94,9 +94,9 @@
       <div class="projects-info-box">
         <div class="projects">
           <div class="project" *ngFor="let project of projects; let i = index"
-            [ngClass]="{ 'active': i === currentIndex }">
+            [ngClass]="{ 'active': i === currentIndex }" (click)="openDialog(i)">
             <img src="{{ project.image }}">
-            <div [ngClass]="'project-info ' + 'project' + i">{{ project.info }}</div>
+            <div [ngClass]="'project-info project' + i">{{ project.info }}</div>
           </div>
         </div>
       </div>
@@ -133,9 +133,9 @@
       <div class="projects-info-box">
         <div class="projects">
           <div class="project" *ngFor="let project of projects; let i = index"
-            [ngClass]="{ 'active': i === currentIndex }">
+            [ngClass]="{ 'active': i === currentIndex }" (click)="openDialog(i)">
             <img src="{{ project.image }}">
-            <div [ngClass]="'project-info ' + 'project' + i">{{ project.info }}</div>
+            <div [ngClass]="'project-info project' + i">{{ project.info }}</div>
           </div>
         </div>
       </div>
@@ -172,9 +172,9 @@
       <div class="projects-info-box">
         <div class="projects">
           <div class="project" *ngFor="let project of projects; let i = index"
-            [ngClass]="{ 'active': i === currentIndex }">
+            [ngClass]="{ 'active': i === currentIndex }" (click)="openDialog(i)">
             <img src="{{ project.image }}">
-            <div [ngClass]="'project-info ' + 'project' + i">{{ project.info }}</div>
+            <div [ngClass]="'project-info project' + i">{{ project.info }}</div>
           </div>
         </div>
       </div>

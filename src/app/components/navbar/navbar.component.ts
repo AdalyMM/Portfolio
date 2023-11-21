@@ -85,4 +85,8 @@ export class NavbarComponent implements OnInit, AfterViewInit, OnDestroy {
       });
     }
   }
+
+  openCV(): void {
+    window.open('../../../assets/cv/CV-SF.pdf', '_blank');
+  }
 }

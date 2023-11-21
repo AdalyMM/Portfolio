@@ -3,6 +3,8 @@ import { Subscription } from 'rxjs';
 import { SharedDataService } from 'src/app/services/shared-data.service';
 import { Breakpoints } from '@angular/cdk/layout';
 import { gsap } from 'gsap';
+import { MatDialog } from '@angular/material/dialog';
+import { ProjectInfoComponent } from 'src/app/components/project-info/project-info.component';
 
 
 @Component({
@@ -34,6 +36,7 @@ export class ProjectsPageComponent implements OnInit, AfterViewInit {
 
   constructor(
     private sharedDataService: SharedDataService,
+    private dialog: MatDialog
   ) { }
 
   ngOnInit(): void {
@@ -114,5 +117,32 @@ export class ProjectsPageComponent implements OnInit, AfterViewInit {
 
   onMouseLeave(elemento: string): void {
     gsap.to(`.${elemento}`, { scale: 1, duration: 0.3 });
+  }
+
+  openDialog(projectNumber: number): void{
+    if(this.breakpoints['Large'] || this.breakpoints['XLarge']) {
+      const dialogRef = this.dialog.open(ProjectInfoComponent, {
+        width: '800px',
+        data: {
+          projectNumber: projectNumber,
+        },
+      });
+    }
+    else if (this.breakpoints['Medium']){
+      const dialogRef = this.dialog.open(ProjectInfoComponent, {
+        width: '500px',
+        data: {
+          projectNumber: projectNumber,
+        },
+      });
+    }
+    else {
+      const dialogRef = this.dialog.open(ProjectInfoComponent, {
+        width: '300px',
+        data: {
+          projectNumber: projectNumber,
+        },
+      });
+    }
   }
 }
