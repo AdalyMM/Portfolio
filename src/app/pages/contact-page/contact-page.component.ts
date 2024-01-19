@@ -81,12 +81,12 @@ export class ContactPageComponent implements OnInit, AfterViewInit {
             this.info = 'aadalymmoncada@gmail.com';
             break;
         case 'whatsapp':
-          window.open('https://wa.me/+529621468781', '_blank');
+          window.open('https://wa.me/+525617216569', '_blank');
           break;
         case 'phone':
           this.activeInfo = true;
           this.titleInfo = 'Teléfono:';
-          this.info = '+529186948721';
+          this.info = '+525617216569';
           break;
       }
     }
