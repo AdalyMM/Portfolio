@@ -58,10 +58,10 @@ export class ContactPageComponent implements OnInit, AfterViewInit {
             window.open('mailto:aadalymmoncada@gmail.com', '_blank');
             break;
         case 'whatsapp':
-          window.open('https://wa.me/+529621468781', '_blank');
+          window.open('https://wa.me/+525617216569', '_blank');
           break;
         case 'phone':
-          window.open('tel:+529186948721', '_blank');
+          window.open('tel:+525617216569', '_blank');
           break;
       }
     }
