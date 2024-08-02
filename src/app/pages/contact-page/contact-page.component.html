@@ -1,1 +1,101 @@
-<p>contact-page works!</p>
+<div class="general-container">
+  <div class="wrapper-xsmall" *ngIf="breakpoints['XSmall']">
+    <div class="title">
+      <span>CONTÁCTAME</span>
+    </div>
+    <div class="contact-icons">
+      <div class="linkedin">
+        <img src="assets/icons/linkedin.png" (click)="openTab('linkedin')" matTooltip="Ir a mi linkedin.">
+      </div>
+      <div class="mail">
+        <img src="assets/icons/mail.png" (click)="openTab('mail')" matTooltip="Clic para copiar mi correo.">
+      </div>
+      <div class="whatsapp">
+        <img src="assets/icons/whatsapp.png" (click)="openTab('whatsapp')" matTooltip="Clic para mostrar mi número de Whatsapp.">
+      </div>
+      <div class="phone">
+        <img src="assets/icons/phone.png" (click)="openTab('phone')" matTooltip="Clic para mostrar mi número de teléfono.">
+      </div>
+    </div>
+  </div>
+  <div class="wrapper-small" *ngIf="breakpoints['Small']">
+    <div class="title">
+      <span>CONTÁCTAME</span>
+    </div>
+    <div class="contact-icons">
+      <div class="linkedin">
+        <img src="assets/icons/linkedin.png" (click)="openTab('linkedin')" matTooltip="Ir a mi linkedin.">
+      </div>
+      <div class="mail">
+        <img src="assets/icons/mail.png" (click)="openTab('mail')" matTooltip="Clic para enviar un correo.">
+      </div>
+      <div class="whatsapp">
+        <img src="assets/icons/whatsapp.png" (click)="openTab('whatsapp')" matTooltip="Clic enviar un mensaje de Whatsapp.">
+      </div>
+      <div class="phone">
+        <img src="assets/icons/phone.png" (click)="openTab('phone')" matTooltip="Clic para hacer contacto por teléfono.">
+      </div>
+    </div>
+  </div>
+  <div class="wrapper-medium" *ngIf="breakpoints['Medium']">
+    <div class="title">
+      <span>CONTÁCTAME</span>
+    </div>
+    <div class="contact-icons">
+      <div class="linkedin">
+        <img src="assets/icons/linkedin.png" (click)="openTab('linkedin')" matTooltip="Ir a mi linkedin." id="linkedin">
+      </div>
+      <div class="mail">
+        <img src="assets/icons/mail.png" (click)="openTab('mail')" matTooltip="Clic para copiar mi correo." id="mail">
+      </div>
+      <div class="whatsapp">
+        <img src="assets/icons/whatsapp.png" (click)="openTab('whatsapp')" matTooltip="Clic para mostrar mi número de Whatsapp." id="whatsapp">
+      </div>
+      <div class="phone">
+        <img src="assets/icons/phone.png" (click)="openTab('phone')" matTooltip="Clic para mostrar mi número de teléfono." id="phone">
+      </div>
+    </div>
+  </div>
+  <div class="wrapper-large" *ngIf="breakpoints['Large']">
+    <div class="title">
+      <span>CONTÁCTAME</span>
+    </div>
+    <div class="contact-icons">
+      <div class="linkedin">
+        <img src="assets/icons/linkedin.png" (click)="openTab('linkedin')" matTooltip="Ir a mi linkedin.">
+      </div>
+      <div class="mail">
+        <img src="assets/icons/mail.png" (click)="openTab('mail')" matTooltip="Clic para copiar mi correo.">
+      </div>
+      <div class="whatsapp">
+        <img src="assets/icons/whatsapp.png" (click)="openTab('whatsapp')" matTooltip="Clic para mostrar mi número de Whatsapp.">
+      </div>
+      <div class="phone">
+        <img src="assets/icons/phone.png" (click)="openTab('phone')" matTooltip="Clic para mostrar mi número de teléfono.">
+      </div>
+    </div>
+  </div>
+  <div class="wrapper-xlarge" *ngIf="breakpoints['XLarge']">
+    <div class="title">
+      <span>CONTÁCTAME</span>
+    </div>
+    <div class="contact-icons">
+      <div class="linkedin">
+        <img src="assets/icons/linkedin.png" (click)="openTab('linkedin')" matTooltip="Ir a mi linkedin.">
+      </div>
+      <div class="mail">
+        <img src="assets/icons/mail.png" (click)="openTab('mail')" matTooltip="Clic para mostrar mi dirección de correo.">
+      </div>
+      <div class="whatsapp">
+        <img src="assets/icons/whatsapp.png" (click)="openTab('whatsapp')" matTooltip="Envíame un mensaje de WhatsApp">
+      </div>
+      <div class="phone">
+        <img src="assets/icons/phone.png" (click)="openTab('phone')" matTooltip="Clic para mostrar mi número de teléfono.">
+      </div>
+    </div>
+  </div>
+  <div class="extra-info" *ngIf="(breakpoints['XLarge'] || breakpoints['Large'] || breakpoints['Medium']) && activeInfo">
+      <h2>{{titleInfo}}</h2>
+      <span>{{info}}</span>
+  </div>
+</div>

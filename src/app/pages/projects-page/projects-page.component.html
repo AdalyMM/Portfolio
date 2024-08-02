@@ -1,1 +1,196 @@
-<p>projects-page works!</p>
+<div class="general-container">
+  <div class="wrapper-xsmall" *ngIf="breakpoints['XSmall']">
+    <div class="title">
+      <span>PROYECTOS</span>
+    </div>
+    <div class="upper-cube">
+      <img src="assets/images/cube.png">
+    </div>
+    <div class="upper-shape">
+      <img src="assets/images/project-corners-shape.png">
+    </div>
+    <div class="projects-container">
+      <div class="arrow-left" (mouseenter)="onMouseEnter('arrow-left')" (mouseleave)="onMouseLeave('arrow-left')"
+        (click)="prevProject()">
+        <img src="assets/icons/chevron-left.png">
+      </div>
+      <div class="projects-info-box">
+        <div class="projects">
+          <div class="project" *ngFor="let project of projects; let i = index"
+            [ngClass]="{ 'active': i === currentIndex }" (click)="openDialog(i)">
+            <img src="{{ project.image }}">
+            <div [ngClass]="'project-info project' + i">{{ project.info }}</div>
+          </div>
+        </div>
+      </div>
+      <div class="arrow-right" (mouseenter)="onMouseEnter('arrow-right')" (mouseleave)="onMouseLeave('arrow-right')"
+        (click)="nextProject()">
+        <img src="assets/icons/chevron-right.png">
+      </div>
+    </div>
+    <div class="robot">
+      <img src="assets/images/robot.png">
+    </div>
+    <div class="lower-shape">
+      <img src="assets/images/project-corners-shape.png">
+    </div>
+    <div class="lower-cube">
+      <img src="assets/images/cube-pyramid.png">
+    </div>
+  </div>
+  <div class="wrapper-small" *ngIf="breakpoints['Small']">
+    <div class="title">
+      <span>PROYECTOS</span>
+    </div>
+    <div class="upper-cube">
+      <img src="assets/images/cube.png">
+    </div>
+    <div class="upper-shape">
+      <img src="assets/images/project-corners-shape.png">
+    </div>
+    <div class="projects-container">
+      <div class="arrow-left" (mouseenter)="onMouseEnter('arrow-left')" (mouseleave)="onMouseLeave('arrow-left')"
+        (click)="prevProject()">
+        <img src="assets/icons/chevron-left.png">
+      </div>
+      <div class="projects-info-box">
+        <div class="projects">
+          <div class="project" *ngFor="let project of projects; let i = index" (click)="openDialog(i)">
+            <img src="{{ project.image }}">
+            <div [ngClass]="'project-info project' + i">{{ project.info }}</div>
+          </div>
+        </div>
+      </div>
+      <div class="arrow-right" (mouseenter)="onMouseEnter('arrow-right')" (mouseleave)="onMouseLeave('arrow-right')"
+        (click)="nextProject()">
+        <img src="assets/icons/chevron-right.png">
+      </div>
+    </div>
+    <div class="robot">
+      <img src="assets/images/robot.png">
+    </div>
+    <div class="lower-shape">
+      <img src="assets/images/project-corners-shape.png">
+    </div>
+    <div class="lower-cube">
+      <img src="assets/images/cube-pyramid.png">
+    </div>
+  </div>
+  <div class="wrapper-medium" *ngIf="breakpoints['Medium']">
+    <div class="title">
+      <span>PROYECTOS</span>
+    </div>
+    <div class="upper-cube">
+      <img src="assets/images/cube.png">
+    </div>
+    <div class="upper-shape">
+      <img src="assets/images/project-corners-shape.png">
+    </div>
+    <div class="projects-container">
+      <div class="arrow-left" (mouseenter)="onMouseEnter('arrow-left')" (mouseleave)="onMouseLeave('arrow-left')"
+        (click)="prevProject()">
+        <img src="assets/icons/chevron-left.png">
+      </div>
+      <div class="projects-info-box">
+        <div class="projects">
+          <div class="project" *ngFor="let project of projects; let i = index"
+            [ngClass]="{ 'active': i === currentIndex }" (click)="openDialog(i)">
+            <img src="{{ project.image }}">
+            <div [ngClass]="'project-info project' + i">{{ project.info }}</div>
+          </div>
+        </div>
+      </div>
+      <div class="arrow-right" (mouseenter)="onMouseEnter('arrow-right')" (mouseleave)="onMouseLeave('arrow-right')"
+        (click)="nextProject()">
+        <img src="assets/icons/chevron-right.png">
+      </div>
+    </div>
+    <div class="robot">
+      <img src="assets/images/robot.png">
+    </div>
+    <div class="lower-shape">
+      <img src="assets/images/project-corners-shape.png">
+    </div>
+    <div class="lower-cube">
+      <img src="assets/images/cube-pyramid.png">
+    </div>
+  </div>
+  <div class="wrapper-large" *ngIf="breakpoints['Large']">
+    <div class="title">
+      <span>PROYECTOS</span>
+    </div>
+    <div class="upper-cube">
+      <img src="assets/images/cube.png">
+    </div>
+    <div class="upper-shape">
+      <img src="assets/images/project-corners-shape.png">
+    </div>
+    <div class="projects-container">
+      <div class="arrow-left" (mouseenter)="onMouseEnter('arrow-left')" (mouseleave)="onMouseLeave('arrow-left')"
+        (click)="prevProject()">
+        <img src="assets/icons/chevron-left.png">
+      </div>
+      <div class="projects-info-box">
+        <div class="projects">
+          <div class="project" *ngFor="let project of projects; let i = index"
+            [ngClass]="{ 'active': i === currentIndex }" (click)="openDialog(i)">
+            <img src="{{ project.image }}">
+            <div [ngClass]="'project-info project' + i">{{ project.info }}</div>
+          </div>
+        </div>
+      </div>
+      <div class="arrow-right" (mouseenter)="onMouseEnter('arrow-right')" (mouseleave)="onMouseLeave('arrow-right')"
+        (click)="nextProject()">
+        <img src="assets/icons/chevron-right.png">
+      </div>
+    </div>
+    <div class="robot">
+      <img src="assets/images/robot.png">
+    </div>
+    <div class="lower-shape">
+      <img src="assets/images/project-corners-shape.png">
+    </div>
+    <div class="lower-cube">
+      <img src="assets/images/cube-pyramid.png">
+    </div>
+  </div>
+  <div class="wrapper-xlarge" *ngIf="breakpoints['XLarge']">
+    <div class="title">
+      <span>PROYECTOS</span>
+    </div>
+    <div class="upper-cube">
+      <img src="assets/images/cube.png">
+    </div>
+    <div class="upper-shape">
+      <img src="assets/images/project-corners-shape.png">
+    </div>
+    <div class="projects-container">
+      <div class="arrow-left" (mouseenter)="onMouseEnter('arrow-left')" (mouseleave)="onMouseLeave('arrow-left')"
+        (click)="prevProject()">
+        <img src="assets/icons/chevron-left.png">
+      </div>
+      <div class="projects-info-box">
+        <div class="projects">
+          <div class="project" *ngFor="let project of projects; let i = index"
+            [ngClass]="{ 'active': i === currentIndex }" (click)="openDialog(i)">
+            <img src="{{ project.image }}">
+            <div [ngClass]="'project-info project' + i">{{ project.info }}</div>
+          </div>
+        </div>
+      </div>
+      <div class="arrow-right" (mouseenter)="onMouseEnter('arrow-right')" (mouseleave)="onMouseLeave('arrow-right')"
+        (click)="nextProject()">
+        <img src="assets/icons/chevron-right.png">
+      </div>
+    </div>
+    <div class="robot">
+      <img src="assets/images/robot.png">
+    </div>
+    <div class="lower-shape">
+      <img src="assets/images/project-corners-shape.png">
+    </div>
+    <div class="lower-cube">
+      <img src="assets/images/cube-pyramid.png">
+    </div>
+  </div>
+</div>

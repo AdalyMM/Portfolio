@@ -9,6 +9,12 @@ import { MainPageComponent } from './pages/main-page/main-page.component';
 import { AboutMePageComponent } from './pages/about-me-page/about-me-page.component';
 import { ProjectsPageComponent } from './pages/projects-page/projects-page.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
+import { HttpClientModule } from '@angular/common/http';
+import { SendEmailComponent } from './components/send-email/send-email.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CommonModule } from '@angular/common';
+import { MaterialModule } from './material/material.module';
+import { ProjectInfoComponent } from './components/project-info/project-info.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +23,18 @@ import { ContactPageComponent } from './pages/contact-page/contact-page.componen
     MainPageComponent,
     AboutMePageComponent,
     ProjectsPageComponent,
-    ContactPageComponent
+    ContactPageComponent,
+    SendEmailComponent,
+    ProjectInfoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot([])
+    HttpClientModule,
+    RouterModule.forRoot([]),
+    BrowserAnimationsModule,
+    CommonModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,17 @@
+<div mat-dialog-container>
+  <h1>Enviar Correo</h1>
+  <mat-dialog-content>
+    <form (ngSubmit)="sendEmail()" #sendEmailForm="ngForm">
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="Destinatario" [(ngModel)]="recipient" required name="Destinatario">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <textarea matInput placeholder="Mensaje" [(ngModel)]="message" required name="Mensaje" id="mensaje"></textarea>
+      </mat-form-field>
+      <div mat-dialog-actions>
+        <button mat-button (click)="closeDialog()">Cancelar</button>
+        <button mat-button type="submit" [disabled]="!isValidForm()">Enviar</button>
+      </div>
+    </form>
+  </mat-dialog-content>
+</div>

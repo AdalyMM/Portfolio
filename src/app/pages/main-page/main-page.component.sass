@@ -1,1016 +1,554 @@
-.wrapper
+.general-container
     width: 100vw
     height: 100vh
-    z-index: 101
+    background-color: rgb(9, 40, 82)
+
+.background-container-xsmall
+    width: 100vw
+    height: 100vh
     position: absolute
     overflow: hidden
+    .corner-upper-form
+        img
+            width: 300px
+            height: 400px
+            position: absolute
+            top: -213px
+            left: -83px
+            z-index: 101
+    .corner-upper-contour
+        img
+            width: 500px
+            height: 600px
+            position: absolute
+            top: -456px
+            left: -15px
+            z-index: 100
+    .upper-big-bubble
+        img
+            width: 100px
+            height: 100px
+            position: absolute
+            top: 50px
+            left: 100px
+            z-index: 102
+    .upper-little-bubble
+        img
+            width: 40px
+            height: 40px
+            position: absolute
+            top: 180px
+            left: 250px
+    .center-form
+        img
+            width: 350px
+            height: 120px
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%) rotate(-15deg)
+            z-index: 100
+    .lower-big-bubble
+        img
+            width: 100px
+            height: 100px
+            position: absolute
+            bottom: 85px
+            right: 80px
+            z-index: 102
+    .lower-little-bubble
+        img
+            width: 40px
+            height: 40px
+            position: absolute
+            bottom: 200px
+            right: 300px
+    .corner-lower-contour
+        img
+            width: 500px
+            height: 600px
+            position: absolute
+            bottom: -465px
+            right: -40px
+            z-index: 100
+    .corner-lower-form
+        .corner-lower-form-img
+            width: 300px
+            height: 400px
+            position: absolute
+            bottom: -140px
+            right: -54px
+            z-index: 100
 
-// XSmall classes
-.upper-container-xsmall
-    width: 239px
-    height: 400px
-    top: 0
-    left: 0
-    position: absolute
-    overflow: hidden
-
-.lower-container-xsmall
-    width: 239px
-    height: 400px
-    bottom: 0
-    right: 0
-    position: absolute
-    overflow: hidden
-
-.image-container-upper-xsmall
-    background-image: url(../../../assets/images/BackgroundStructure.png)
-    background-size: cover
-    background-position: top left
-    background-repeat: no-repeat
-    z-index: 100
-    position: absolute
-    width: 1707.58px
-    height: 490.542px
-    transform: translate(-607.742px, -665.718px) rotate(90deg)
-    overflow: hidden
-
-.image-container-lower-xsmall
-    background-image: url(../../../assets/images/BackgroundStructure.png)
-    background-size: cover
-    z-index: 100
-    position: inherit
-    width: 300px
-    height: 100px
-    transform: scale(4.5, 4.5) translate(-31px, 140px) rotate(270deg)
-
-// Small classes
-.upper-container-small
-    width: 350px
-    height: 350px
-    top: 0
-    left: 0
-    position: absolute
-    overflow: hidden
-
-.lower-container-small
-    width: 350px
-    height: 350px
-    bottom: 0
-    right: 0
-    position: absolute
-    overflow: hidden
-
-.image-container-upper-small
-    background-image: url(../../../assets/images/BackgroundStructure.png)
-    background-size: cover
-    background-position: top left
-    background-repeat: no-repeat
-    z-index: 100
-    position: absolute
-    width: 782px
-    height: 405px
-    transform: scale(1.8, 1.8) translate(-109px, -311px) rotate(90deg)
-    overflow: hidden
-
-.image-container-lower-small
-    background-image: url(../../../assets/images/BackgroundStructure.png)
-    background-size: cover
-    background-repeat: no-repeat
-    z-index: 100
-    position: absolute
-    width: 790px
-    height: 350px
-    transform: scale(1.8, 1.8) translate(-167px, 305px) rotate(270deg)
-
-// Medium classes
-.upper-container-medium
-    width: 625px
-    height: 500px
-    top: 0
-    left: 0
-    position: absolute
-    overflow: hidden
-
-.lower-container-medium
-    width: 625px
-    height: 500px
-    bottom: 0
-    right: 0
-    position: absolute
-    overflow: hidden
-
-.image-container-upper-medium
-    background-image: url(../../../assets/images/BackgroundStructure.png)
-    background-size: cover
-    background-position: top left
-    background-repeat: no-repeat
-    z-index: 100
-    position: absolute
-    width: 950px
-    height: 500px
-    transform: scale(2, 2) translate(-87px, -348px) rotate(90deg)
-    overflow: hidden
-
-.image-container-lower-medium
-    background-image: url(../../../assets/images/BackgroundStructure.png)
-    background-size: cover
-    background-repeat: no-repeat
-    z-index: 100
-    position: absolute
-    width: 950px
-    height: 500px
-    transform: scale(2, 2) translate(-77px, 348px) rotate(270deg)
-
-// Large classes
-.upper-container-large
-    width: 600px
-    height: 600px
-    top: 0
-    left: 0
-    position: absolute
-    overflow: hidden
-
-.lower-container-large
-    width: 600px
-    height: 600px
-    bottom: 0
-    right: 0
-    position: absolute
-    overflow: hidden
-
-.image-container-upper-large
-    background-image: url(../../../assets/images/BackgroundStructure.png)
-    background-size: cover
-    background-position: top left
-    background-repeat: no-repeat
-    z-index: 100
-    position: absolute
-    width: 725px
-    height: 400px
-    transform: scale(3.5, 3.5) translate(-18px, -272px) rotate(90deg)
-    overflow: hidden
-
-.image-container-lower-large
-    background-image: url(../../../assets/images/BackgroundStructure.png)
-    background-size: cover
-    background-repeat: no-repeat
-    z-index: 100
-    position: absolute
-    width: 710px
-    height: 400px
-    transform: scale(3.5, 3.5) translate(-12px, 300px) rotate(270deg)
-
-// XLarge classes
-.upper-container-xlarge
-    width: 800px
-    height: 800px
-    top: 0
-    left: 0
-    position: absolute
-    overflow: hidden
-
-.lower-container-xlarge
-    width: 800px
-    height: 800px
-    bottom: 0
-    right: 0
-    position: absolute
-    overflow: hidden
-
-.image-container-upper-xlarge
-    background-image: url(../../../assets/images/BackgroundStructure.png)
-    background-size: cover
-    background-position: top left
-    background-repeat: no-repeat
-    z-index: 100
-    position: absolute
-    width: 700px
-    height: 400px
-    transform: scale(4.5, 4.5) translate(0px, -239px) rotate(90deg)
-    overflow: hidden
-
-.image-container-lower-xlarge
-    background-image: url(../../../assets/images/BackgroundStructure.png)
-    background-size: cover
-    background-repeat: no-repeat
-    z-index: 100
-    position: absolute
-    width: 700px
-    height: 400px
-    transform: scale(4.5, 4.5) translate(0px, 348px) rotate(270deg)
-
-.styles-container
+.wrapper-xsmall
+    width: 100vw
+    height: 100vh
+    //background-color: rgb(9, 40, 82)
     display: flex
     flex-direction: column
     justify-content: center
     align-items: center
-    position: relative
-    z-index: 103
-    height: 100%
-
-// Responsive styles
-.xsmall-styles
-    .box-upper-triangle
-        width: 192px
-        height: 192px
-        top: 40px
-        right: 0
-        position: absolute
-
-    .upper-triangle
-        clip-path: path("M 96 192 L 192 0 L 0 0 L 96 192 Z")
-        background: rgba(65, 75, 59, 0.815)
-        position: absolute
-        top: 0
-        right: 0
-        width: 192px
-        height: 192px
-        transform: rotate(90deg)
-
-    .box-lower-triangle
-        width: 192px
-        height: 192px
-        bottom: 0
-        left: 0
-        position: absolute
-
-    .lower-triangle
-        clip-path: path("M 96 192 L 192 0 L 0 0 L 96 192 Z")
-        background: rgba(140, 168, 124, 0.815)
-        position: absolute
-        bottom: 0
-        left: 0
-        width: 192px
-        height: 192px
-        transform: rotate(-90deg)
-
-    .box-upper-hexagon
-        width: 500px
-        height: 436px
-        margin-left: 0px
-        margin-top: 0px
-        position: absolute
-        top: -130px
-        left: -130px
-        transform: scale(0.259609, 0.259003)
-
-    .upper-hexagon
-        clip-path: path("M 375 0 L 125 0 L 0 218 L 125 436 L 375 436 L 500 218 L 375 0 Z M 368.2 424.189 L 131.8 424.189 L 13.6 218 L 131.8 11.8108 L 368.2 11.8108 L 486.4 218 L 368.2 424.189 Z")
-        background: rgb(140, 168, 124)
-        width: 500px
-        height: 436px
-
-    .box-little-hexagon-1
-        width: 500px
-        height: 436px
-        margin-left: 0px
-        margin-top: 0px
-        position: absolute
-        bottom: -80px
-        right: 50px
-        transform: scale(0.161572, 0.161332)
-
-    .little-hexagon-1
-        clip-path: path("M 375 0 L 125 0 L 0 218 L 125 436 L 375 436 L 500 218 L 375 0 Z M 368.2 424.189 L 131.8 424.189 L 13.6 218 L 131.8 11.8108 L 368.2 11.8108 L 486.4 218 L 368.2 424.189 Z")
-        background: rgb(65, 75, 59)
-        width: 500px
-        height: 436px
-
-    .box-little-hexagon-2
-        width: 500px
-        height: 436px
-        margin-left: 0px
-        margin-top: 0px
-        position: absolute
-        top: 70px
-        left: 90px
-        transform: scale(0.161572, 0.161332)
-
-    .little-hexagon-2
-        clip-path: path("M 375 0 L 125 0 L 0 218 L 125 436 L 375 436 L 500 218 L 375 0 Z M 368.2 424.189 L 131.8 424.189 L 13.6 218 L 131.8 11.8108 L 368.2 11.8108 L 486.4 218 L 368.2 424.189 Z")
-        background: rgb(65, 75, 59)
-        width: 500px
-        height: 436px
-
-    .box-little-hexagon-3
-        width: 500px
-        height: 436px
-        margin-left: 0px
-        margin-top: 0px
-        position: absolute
-        bottom: 60px
-        left: 110px
-        transform: scale(0.161572, 0.161332)
-
-    .little-hexagon-3
-        clip-path: path("M 375 0 L 125 0 L 0 218 L 125 436 L 375 436 L 500 218 L 375 0 Z M 368.2 424.189 L 131.8 424.189 L 13.6 218 L 131.8 11.8108 L 368.2 11.8108 L 486.4 218 L 368.2 424.189 Z")
-        background: rgb(140, 168, 124)
-        width: 500px
-        height: 436px
-
-    .box-little-hexagon-4
-        width: 500px
-        height: 436px
-        margin-left: 0px
-        margin-top: 0px
-        position: absolute
-        top: -100px
-        left: 70px
-        transform: scale(0.161572, 0.161332)
-
-    .little-hexagon-4
-        clip-path: path("M 375 0 L 125 0 L 0 218 L 125 436 L 375 436 L 500 218 L 375 0 Z M 368.2 424.189 L 131.8 424.189 L 13.6 218 L 131.8 11.8108 L 368.2 11.8108 L 486.4 218 L 368.2 424.189 Z")
-        background: rgb(140, 168, 124)
-        width: 500px
-        height: 436px
-        transform-origin: 0px 0px
-
-    .box-lower-hexagon
-        //width: 329.804px
-        //height: 287.325px
-        width: 500px
-        height: 436px
-        margin-left: 0px
-        margin-top: 0px
-        position: absolute
-        bottom: -100px
-        right: -100px
-        transform: scale(0.30609, 0.30003)
-
-    .lower-hexagon
-        clip-path: path("M 375 0 L 125 0 L 0 218 L 125 436 L 375 436 L 500 218 L 375 0 Z M 368.2 424.189 L 131.8 424.189 L 13.6 218 L 131.8 11.8108 L 368.2 11.8108 L 486.4 218 L 368.2 424.189 Z")
-        background: rgb(65, 75, 59)
-        width: 500px
-        height: 436px
-
-    .container
-        display: flex
-        flex-direction: column
-        justify-content: center
-        align-items: flex-start
-        position: relative
-        z-index: 103
-
-    .div-main-title
-        width: auto
-        height: auto
-
-    .div-main-subtitle
-        margin-bottom: 15%
-
     .main-title
-        font-size: 123px
-        font-family: 'Chloe'
-        font-weight: 400
-        text-shadow: rgba(0, 0, 0, 0.4) 7px 4px 0px
-        margin: 0
-
-    .main-subtitle
-        font-size: 24px
-        font-family: 'IBM Plex Sans Thai Looped Regular'
-        margin: 0
-        //text-shadow: rgba(0, 0, 0, 0.325) 0px 9.01204px 38.3012px
-        -webkit-text-stroke: 3.28167px rgba(191, 191, 191, 0.281)
-        opacity: 0
-
-.small-styles
-    .box-upper-triangle
-        width: 256px
-        height: 256px
-        top: 40px
-        right: 0
-        position: absolute
-
-    .upper-triangle
-        clip-path: path("M 128 256 L 256 0 L 0 0 L 128 256 Z")
-        background: rgba(65, 75, 59, 0.815)
-        position: absolute
-        top: 0
-        right: 0
-        width: 256px
-        height: 256px
-        transform: rotate(90deg)
-
-    .box-lower-triangle
-        width: 256px
-        height: 256px
-        bottom: 0
-        left: 0
-        position: absolute
-
-    .lower-triangle
-        clip-path: path("M 128 256 L 256 0 L 0 0 L 128 256 Z")
-        background: rgba(140, 168, 124, 0.815)
-        position: absolute
-        bottom: 0
-        left: 0
-        width: 256px
-        height: 256px
-        transform: rotate(-90deg)
-
-    .box-upper-hexagon
-        margin-left: 0px
-        margin-top: 0px
-        position: absolute
-        top: -80px
-        right: -90px
-        transform: scale(0.459609, 0.459003)
-
-    .upper-hexagon
-        clip-path: path("M 375 0 L 125 0 L 0 218 L 125 436 L 375 436 L 500 218 L 375 0 Z M 368.2 424.189 L 131.8 424.189 L 13.6 218 L 131.8 11.8108 L 368.2 11.8108 L 486.4 218 L 368.2 424.189 Z")
-        background: rgb(140, 168, 124)
-        width: 500px
-        height: 436px
-
-    .box-little-hexagon-1
-        width: 500px
-        height: 436px
-        margin-left: 0px
-        margin-top: 0px
-        position: absolute
-        bottom: -80px
-        right: 50px
-        transform: scale(0.161572, 0.161332)
-
-    .little-hexagon-1
-        clip-path: path("M 375 0 L 125 0 L 0 218 L 125 436 L 375 436 L 500 218 L 375 0 Z M 368.2 424.189 L 131.8 424.189 L 13.6 218 L 131.8 11.8108 L 368.2 11.8108 L 486.4 218 L 368.2 424.189 Z")
-        background: rgb(140, 168, 124)
-        width: 500px
-        height: 436px
-
-    .box-little-hexagon-2
-        width: 130.786px
-        height: 113.941px
-        margin-left: 0px
-        margin-top: 0px
-        position: absolute
-        top: 20px
-        left: 70px
-
-    .little-hexagon-2
-        clip-path: path("M 375 0 L 125 0 L 0 218 L 125 436 L 375 436 L 500 218 L 375 0 Z M 368.2 424.189 L 131.8 424.189 L 13.6 218 L 131.8 11.8108 L 368.2 11.8108 L 486.4 218 L 368.2 424.189 Z")
-        background: rgb(65, 75, 59)
-        width: 500px
-        height: 436px
-        transform: scale(0.261572, 0.261332)
-        transform-origin: 0px 0px
-
-    .box-little-hexagon-3
-        width: 500px
-        height: 436px
-        margin-left: 0px
-        margin-top: 0px
-        position: absolute
-        bottom: 60px
-        right: -110px
-        transform: scale(0.261572, 0.261332)
-
-    .little-hexagon-3
-        clip-path: path("M 375 0 L 125 0 L 0 218 L 125 436 L 375 436 L 500 218 L 375 0 Z M 368.2 424.189 L 131.8 424.189 L 13.6 218 L 131.8 11.8108 L 368.2 11.8108 L 486.4 218 L 368.2 424.189 Z")
-        background: rgb(65, 75, 59)
-        width: 500px
-        height: 436px
-
-    .box-little-hexagon-4
-        width: 500px
-        height: 436px
-        margin-left: 0px
-        margin-top: 0px
-        position: absolute
-        top: -100px
-        left: 70px
-        transform: scale(0.161572, 0.161332)
-
-    .little-hexagon-4
-        clip-path: path("M 375 0 L 125 0 L 0 218 L 125 436 L 375 436 L 500 218 L 375 0 Z M 368.2 424.189 L 131.8 424.189 L 13.6 218 L 131.8 11.8108 L 368.2 11.8108 L 486.4 218 L 368.2 424.189 Z")
-        background: rgb(140, 168, 124)
-        width: 500px
-        height: 436px
-        transform-origin: 0px 0px
-
-    .box-lower-hexagon
-        //width: 329.804px
-        //height: 287.325px
-        margin-left: 0px
-        margin-top: 0px
-        position: absolute
-        bottom: -60px
-        left: -110px
-        transform: scale(0.459609, 0.459003)
-
-    .lower-hexagon
-        clip-path: path("M 375 0 L 125 0 L 0 218 L 125 436 L 375 436 L 500 218 L 375 0 Z M 368.2 424.189 L 131.8 424.189 L 13.6 218 L 131.8 11.8108 L 368.2 11.8108 L 486.4 218 L 368.2 424.189 Z")
-        background: rgb(65, 75, 59)
-        width: 500px
-        height: 436px        
-
-    .container
-        display: flex
-        flex-direction: column
-        justify-content: center
-        align-items: flex-start
-        position: relative
-        z-index: 103
-
-    .div-main-title
-        width: auto
-        height: auto
-
-    .div-main-subtitle
-        margin-bottom: 15%
-
-    .main-title
-        font-size: 123px
-        font-family: 'Chloe'
-        font-weight: 400
-        text-shadow: rgba(0, 0, 0, 0.4) 7px 4px 0px
-        margin: 0
-
-    .main-subtitle
-        font-size: 24px
-        font-family: 'IBM Plex Sans Thai Looped Regular'
-        margin: 0
-        text-shadow: rgba(0, 0, 0, 0.325) 0px 9.01204px 38.3012px
-        -webkit-text-stroke: 3.28167px rgba(191, 191, 191, 0.281)
-        opacity: 0
-
-.medium-styles
-    .box-upper-triangle
-        width: 384px
-        height: 384px
-        top: 40px
-        right: 0
-        position: absolute
-
-    .upper-triangle
-        clip-path: path("M 192 384 L 384 0 L 0 0 L 192 384 Z")
-        background: rgba(65, 75, 59, 0.815)
-        position: absolute
-        top: 0
-        right: 0
-        width: 384px
-        height: 384px
-        transform: rotate(90deg)
-
-    .box-lower-triangle
-        width: 384px
-        height: 384px
-        bottom: 0
-        left: 0
-        position: absolute
-
-    .lower-triangle
-        clip-path: path("M 192 384 L 384 0 L 0 0 L 192 384 Z")
-        background: rgba(140, 168, 124, 0.815)
-        position: absolute
-        bottom: 0
-        left: 0
-        width: 384px
-        height: 384px
-        transform: rotate(-90deg)
-
-    .box-upper-hexagon
-        width: 500px
-        height: 436px
-        margin-left: 0px
-        margin-top: 0px
-        position: absolute
-        top: -40px
-        right: -130px
-        transform: scale(0.559609, 0.559003)
-
-    .upper-hexagon
-        clip-path: path("M 375 0 L 125 0 L 0 218 L 125 436 L 375 436 L 500 218 L 375 0 Z M 368.2 424.189 L 131.8 424.189 L 13.6 218 L 131.8 11.8108 L 368.2 11.8108 L 486.4 218 L 368.2 424.189 Z")
-        background: rgb(140, 168, 124)
-        width: 500px
-        height: 436px
-
-    .box-little-hexagon-1
-        width: 500px
-        height: 436px
-        margin-left: 0px
-        margin-top: 0px
-        position: absolute
-        bottom: 120px
-        right: -170px
-        transform: scale(0.261572, 0.261332)
-
-    .little-hexagon-1
-        clip-path: path("M 375 0 L 125 0 L 0 218 L 125 436 L 375 436 L 500 218 L 375 0 Z M 368.2 424.189 L 131.8 424.189 L 13.6 218 L 131.8 11.8108 L 368.2 11.8108 L 486.4 218 L 368.2 424.189 Z")
-        background: rgb(65, 75, 59)
-        width: 500px
-        height: 436px
-
-    .box-little-hexagon-3
-        width: 500px
-        height: 436px
-        margin-left: 0px
-        margin-top: 0px
-        position: absolute
-        bottom: -116px
-        left: 125px
-        transform: scale(0.261572, 0.261332)
-
-    .little-hexagon-3
-        clip-path: path("M 375 0 L 125 0 L 0 218 L 125 436 L 375 436 L 500 218 L 375 0 Z M 368.2 424.189 L 131.8 424.189 L 13.6 218 L 131.8 11.8108 L 368.2 11.8108 L 486.4 218 L 368.2 424.189 Z")
-        background: rgb(140, 168, 124)
-        width: 500px
-        height: 436px
-
-    .box-little-hexagon-4
-        width: 500px
-        height: 436px
-        margin-left: 0px
-        margin-top: 0px
-        position: absolute
-        top: 180px
-        left: -140px
-        transform: scale(0.161572, 0.161332)
-
-    .little-hexagon-4
-        clip-path: path("M 375 0 L 125 0 L 0 218 L 125 436 L 375 436 L 500 218 L 375 0 Z M 368.2 424.189 L 131.8 424.189 L 13.6 218 L 131.8 11.8108 L 368.2 11.8108 L 486.4 218 L 368.2 424.189 Z")
-        background: rgb(140, 168, 124)
-        width: 500px
-        height: 436px
-        transform-origin: 0px 0px
-
-    .box-lower-hexagon
-        width: 500px
-        height: 436px
-        margin-left: 0px
-        margin-top: 0px
-        position: absolute
-        bottom: -30px
-        left: -100px
-        transform: scale(0.459609, 0.459003)
-
-    .lower-hexagon
-        clip-path: path("M 375 0 L 125 0 L 0 218 L 125 436 L 375 436 L 500 218 L 375 0 Z M 368.2 424.189 L 131.8 424.189 L 13.6 218 L 131.8 11.8108 L 368.2 11.8108 L 486.4 218 L 368.2 424.189 Z")
-        background: rgb(65, 75, 59)
-        width: 500px
-        height: 436px
-
-    .container
-        display: flex
-        flex-direction: column
-        justify-content: center
-        align-items: center
-        position: relative
-        z-index: 103
-
-    .div-main-title
-        width: auto
-        height: auto
-
-    .div-main-subtitle
-        margin-bottom: 10%
-
-    .main-title
-        font-size: 120px
-        font-family: 'Chloe'
-        font-weight: 400
-        text-shadow: rgba(0, 0, 0, 0.4) 7px 4px 0px
-        margin: 0
-
-    .main-subtitle
+        font-family: 'Garet-Heavy'
+        color: #ffffff
         font-size: 40px
-        font-family: 'IBM Plex Sans Thai Looped Regular'
-        margin: 0
-        text-shadow: rgba(0, 0, 0, 0.325) 0px 9.01204px 38.3012px
-        -webkit-text-stroke: 3.28167px rgba(191, 191, 191, 0.281)
-        opacity: 0
-
-.large-styles
-    .box-upper-triangle
-        width: 384px
-        height: 384px
-        top: 40px
-        right: 0
-        position: absolute
-
-    .upper-triangle
-        clip-path: path("M 192 384 L 384 0 L 0 0 L 192 384 Z")
-        background: rgba(65, 75, 59, 0.815)
-        position: absolute
-        top: 0
-        right: 0
-        width: 384px
-        height: 384px
-        transform: rotate(90deg)
-
-    .box-lower-triangle
-        width: 384px
-        height: 384px
-        bottom: 0
-        left: 0
-        position: absolute
-
-    .lower-triangle
-        clip-path: path("M 192 384 L 384 0 L 0 0 L 192 384 Z")
-        background: rgba(140, 168, 124, 0.815)
-        position: absolute
-        bottom: 0
-        left: 0
-        width: 384px
-        height: 384px
-        transform: rotate(-90deg)
-
-    .box-upper-hexagon
-        width: 329.804px
-        height: 287.325px
-        margin-left: 0px
-        margin-top: 0px
-        position: absolute
-        top: 80px
-        right: -30px
-
-    .upper-hexagon
-        clip-path: path("M 375 0 L 125 0 L 0 218 L 125 436 L 375 436 L 500 218 L 375 0 Z M 368.2 424.189 L 131.8 424.189 L 13.6 218 L 131.8 11.8108 L 368.2 11.8108 L 486.4 218 L 368.2 424.189 Z")
-        background: rgb(140, 168, 124)
-        width: 500px
-        height: 436px
-        transform: scale(0.659609, 0.659003)
-        transform-origin: 0px 0px
-
-    .box-little-hexagon-1
-        width: 130.786px
-        height: 113.941px
-        margin-left: 0px
-        margin-top: 0px
-        position: absolute
-        top: 430px
-        right: 50px
-
-    .little-hexagon-1
-        clip-path: path("M 375 0 L 125 0 L 0 218 L 125 436 L 375 436 L 500 218 L 375 0 Z M 368.2 424.189 L 131.8 424.189 L 13.6 218 L 131.8 11.8108 L 368.2 11.8108 L 486.4 218 L 368.2 424.189 Z")
-        background: rgb(65, 75, 59)
-        width: 500px
-        height: 436px
-        transform: scale(0.261572, 0.261332)
-        transform-origin: 0px 0px
-
-    .box-little-hexagon-2
-        width: 130.786px
-        height: 113.941px
-        margin-left: 0px
-        margin-top: 0px
-        position: absolute
-        top: 330px
-        left: 150px
-
-    .little-hexagon-2
-        clip-path: path("M 375 0 L 125 0 L 0 218 L 125 436 L 375 436 L 500 218 L 375 0 Z M 368.2 424.189 L 131.8 424.189 L 13.6 218 L 131.8 11.8108 L 368.2 11.8108 L 486.4 218 L 368.2 424.189 Z")
-        background: rgb(140, 168, 124)
-        width: 500px
-        height: 436px
-        transform: scale(0.261572, 0.261332)
-        transform-origin: 0px 0px
-
-    .box-little-hexagon-3
-        width: 130.786px
-        height: 113.941px
-        margin-left: 0px
-        margin-top: 0px
-        position: absolute
-        bottom: 30px
-        left: 400px
-
-    .little-hexagon-3
-        clip-path: path("M 375 0 L 125 0 L 0 218 L 125 436 L 375 436 L 500 218 L 375 0 Z M 368.2 424.189 L 131.8 424.189 L 13.6 218 L 131.8 11.8108 L 368.2 11.8108 L 486.4 218 L 368.2 424.189 Z")
-        background: rgb(140, 168, 124)
-        width: 500px
-        height: 436px
-        transform: scale(0.261572, 0.261332)
-        transform-origin: 0px 0px
-
-    .box-little-hexagon-4
-        width: 130.786px
-        height: 113.941px
-        margin-left: 0px
-        margin-top: 0px
-        position: absolute
-        top: 100px
-        right: 450px
-
-    .little-hexagon-4
-        clip-path: path("M 375 0 L 125 0 L 0 218 L 125 436 L 375 436 L 500 218 L 375 0 Z M 368.2 424.189 L 131.8 424.189 L 13.6 218 L 131.8 11.8108 L 368.2 11.8108 L 486.4 218 L 368.2 424.189 Z")
-        background: rgb(65, 75, 59)
-        width: 500px
-        height: 436px
-        transform: scale(0.261572, 0.261332)
-        transform-origin: 0px 0px
-
-    .box-lower-hexagon
-        width: 329.804px
-        height: 287.325px
-        margin-left: 0px
-        margin-top: 0px
-        position: absolute
-        bottom: 80px
-        left: -30px
-
-    .lower-hexagon
-        clip-path: path("M 375 0 L 125 0 L 0 218 L 125 436 L 375 436 L 500 218 L 375 0 Z M 368.2 424.189 L 131.8 424.189 L 13.6 218 L 131.8 11.8108 L 368.2 11.8108 L 486.4 218 L 368.2 424.189 Z")
-        background: rgb(65, 75, 59)
-        width: 500px
-        height: 436px
-        transform-origin: 0px 0px
-        transform: scale(0.659609, 0.659003)
-
-    .container
+        z-index: 103
+        overflow: hidden
+        span
+            opacity: 0
+            position: relative
+    .main-subtitle
+        font-family: 'Garet-Book'
+        font-weight: 600
+        color: #ffffff
+        font-size: 13px
+        width: 270px
+        height: 30px
+        background-color: #ff6b73
         display: flex
-        flex-direction: column
         justify-content: center
         align-items: center
-        position: relative
+        border-radius: 45px
         z-index: 103
-    
-    .div-main-title
-        width: auto
-        height: auto
+        overflow: hidden
 
-    .div-main-subtitle
-        margin-bottom: 10%
+// Styles for small screens
+.background-container-small
+    width: 100vw
+    height: 100vh
+    position: absolute
+    overflow: hidden
+    .corner-upper-form
+        img
+            width: 300px
+            height: 400px
+            position: absolute
+            top: -213px
+            left: -83px
+            z-index: 101
+    .corner-upper-contour
+        img
+            width: 500px
+            height: 600px
+            position: absolute
+            top: -456px
+            left: -15px
+            z-index: 100
+    .upper-big-bubble
+        img
+            width: 100px
+            height: 100px
+            position: absolute
+            top: 50px
+            left: 100px
+            z-index: 102
+    .upper-little-bubble
+        img
+            width: 40px
+            height: 40px
+            position: absolute
+            top: 180px
+            left: 250px
+    .center-form
+        img
+            width: 350px
+            height: 120px
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%) rotate(-15deg)
+            z-index: 100
+    .lower-big-bubble
+        img
+            width: 100px
+            height: 100px
+            position: absolute
+            bottom: 85px
+            right: 80px
+            z-index: 102
+    .lower-little-bubble
+        img
+            width: 40px
+            height: 40px
+            position: absolute
+            bottom: 200px
+            right: 300px
+    .corner-lower-contour
+        img
+            width: 500px
+            height: 600px
+            position: absolute
+            bottom: -465px
+            right: -40px
+            z-index: 100
+    .corner-lower-form
+        .corner-lower-form-img
+            width: 300px
+            height: 400px
+            position: absolute
+            bottom: -140px
+            right: -54px
+            z-index: 100
 
+.wrapper-small
+    width: 100vw
+    height: 100vh
+    //background-color: rgb(9, 40, 82)
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
     .main-title
-        font-size: 120px
-        font-family: 'Chloe'
-        font-weight: 400
-        text-shadow: rgba(0, 0, 0, 0.4) 7px 4px 0px
-        margin: 0
-
+        font-family: 'Garet-Heavy'
+        color: #ffffff
+        font-size: 60px
+        z-index: 103
+        overflow: hidden
+        span
+            opacity: 0
+            position: relative
     .main-subtitle
-        font-size: 40px
-        font-family: 'IBM Plex Sans Thai Looped Regular'
-        margin: 0
-        text-shadow: rgba(0, 0, 0, 0.325) 0px 9.01204px 38.3012px
-        -webkit-text-stroke: 3.28167px rgba(191, 191, 191, 0.281)
-        opacity: 0
-
-.xlarge-styles
-    .box-upper-triangle
-        width: 512px
-        height: 512px
-        top: 40px
-        right: 0
-        position: absolute
-
-    .upper-triangle
-        clip-path: path("M 256 512 L 512 0 L 0 0 L 256 512 Z")
-        background: rgba(65, 75, 59, 0.815)
-        position: absolute
-        top: 0
-        right: 0
-        width: 512px
-        height: 512px
-        transform: rotate(90deg)
-
-    .box-lower-triangle
-        width: 512px
-        height: 512px
-        bottom: 0
-        left: 0
-        position: absolute
-
-    .lower-triangle
-        clip-path: path("M 256 512 L 512 0 L 0 0 L 256 512 Z")
-        background: rgba(140, 168, 124, 0.815)
-        position: absolute
-        bottom: 0
-        left: 0
-        width: 512px
-        height: 512px
-        transform: rotate(-90deg)
-
-    .box-upper-hexagon
-        width: 329.804px
-        height: 287.325px
-        margin-left: 0px
-        margin-top: 0px
-        position: absolute
-        top: 80px
-        right: -30px
-
-    .upper-hexagon
-        clip-path: path("M 375 0 L 125 0 L 0 218 L 125 436 L 375 436 L 500 218 L 375 0 Z M 368.2 424.189 L 131.8 424.189 L 13.6 218 L 131.8 11.8108 L 368.2 11.8108 L 486.4 218 L 368.2 424.189 Z")
-        background: rgb(140, 168, 124)
-        width: 500px
-        height: 436px
-        transform: scale(0.659609, 0.659003)
-        transform-origin: 0px 0px
-
-    .box-little-hexagon-1
-        width: 130.786px
-        height: 113.941px
-        margin-left: 0px
-        margin-top: 0px
-        position: absolute
-        top: 430px
-        right: 50px
-
-    .little-hexagon-1
-        clip-path: path("M 375 0 L 125 0 L 0 218 L 125 436 L 375 436 L 500 218 L 375 0 Z M 368.2 424.189 L 131.8 424.189 L 13.6 218 L 131.8 11.8108 L 368.2 11.8108 L 486.4 218 L 368.2 424.189 Z")
-        background: rgb(140, 168, 124)
-        width: 500px
-        height: 436px
-        transform: scale(0.261572, 0.261332)
-        transform-origin: 0px 0px
-
-    .box-little-hexagon-2
-        width: 130.786px
-        height: 113.941px
-        margin-left: 0px
-        margin-top: 0px
-        position: absolute
-        top: 330px
-        right: -10px
-
-    .little-hexagon-2
-        clip-path: path("M 375 0 L 125 0 L 0 218 L 125 436 L 375 436 L 500 218 L 375 0 Z M 368.2 424.189 L 131.8 424.189 L 13.6 218 L 131.8 11.8108 L 368.2 11.8108 L 486.4 218 L 368.2 424.189 Z")
-        background: rgb(140, 168, 124)
-        width: 500px
-        height: 436px
-        transform: scale(0.261572, 0.261332)
-        transform-origin: 0px 0px
-
-    .box-little-hexagon-3
-        width: 130.786px
-        height: 113.941px
-        margin-left: 0px
-        margin-top: 0px
-        position: absolute
-        top: 330px
-        right: -10px
-
-    .little-hexagon-3
-        clip-path: path("M 375 0 L 125 0 L 0 218 L 125 436 L 375 436 L 500 218 L 375 0 Z M 368.2 424.189 L 131.8 424.189 L 13.6 218 L 131.8 11.8108 L 368.2 11.8108 L 486.4 218 L 368.2 424.189 Z")
-        background: rgb(140, 168, 124)
-        width: 500px
-        height: 436px
-        transform: scale(0.261572, 0.261332)
-        transform-origin: 0px 0px
-
-    .box-little-hexagon-4
-        width: 130.786px
-        height: 113.941px
-        margin-left: 0px
-        margin-top: 0px
-        position: absolute
-        top: 330px
-        right: -10px
-
-    .little-hexagon-4
-        clip-path: path("M 375 0 L 125 0 L 0 218 L 125 436 L 375 436 L 500 218 L 375 0 Z M 368.2 424.189 L 131.8 424.189 L 13.6 218 L 131.8 11.8108 L 368.2 11.8108 L 486.4 218 L 368.2 424.189 Z")
-        background: rgb(140, 168, 124)
-        width: 500px
-        height: 436px
-        transform: scale(0.261572, 0.261332)
-        transform-origin: 0px 0px
-
-    .box-lower-hexagon
-        width: 329.804px
-        height: 287.325px
-        margin-left: 0px
-        margin-top: 0px
-        position: absolute
-        bottom: 80px
-        left: -30px
-
-    .lower-hexagon
-        clip-path: path("M 375 0 L 125 0 L 0 218 L 125 436 L 375 436 L 500 218 L 375 0 Z M 368.2 424.189 L 131.8 424.189 L 13.6 218 L 131.8 11.8108 L 368.2 11.8108 L 486.4 218 L 368.2 424.189 Z")
-        background: rgb(65, 75, 59)
-        width: 500px
-        height: 436px
-        transform-origin: 0px 0px
-        transform: scale(0.659609, 0.659003)
-
-    .container
+        font-family: 'Garet-Book'
+        font-weight: 600
+        color: #ffffff
+        font-size: 15px
+        width: 350px
+        height: 40px
+        background-color: #ff6b73
         display: flex
-        flex-direction: column
         justify-content: center
         align-items: center
-        position: relative
+        border-radius: 45px
         z-index: 103
-    
-    .div-main-title
-        width: auto
-        height: auto
+        overflow: hidden
 
-    .div-main-subtitle
-        margin-bottom: 10%
+// Styles for medium screens
+.background-container-medium
+    width: 100vw
+    height: 100vh
+    position: absolute
+    overflow: hidden
+    .corner-upper-form
+        img
+            width: 600px
+            height: 700px
+            position: absolute
+            top: -340px
+            left: -283px
+            z-index: 101
+    .corner-upper-contour
+        img
+            width: 700px
+            height: 800px
+            position: absolute
+            top: -656px
+            left: -15px
+            z-index: 100
+    .upper-big-bubble
+        img
+            width: 150px
+            height: 150px
+            position: absolute
+            top: 120px
+            left: 100px
+            z-index: 102
+    .upper-little-bubble
+        img
+            width: 80px
+            height: 80px
+            position: absolute
+            top: 180px
+            left: 350px
+    .center-form
+        img
+            width: 700px
+            height: 200px
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%) rotate(-15deg)
+            z-index: 100
+    .lower-big-bubble
+        img
+            width: 150px
+            height: 150px
+            position: absolute
+            bottom: 85px
+            right: 80px
+            z-index: 102
+    .lower-little-bubble
+        img
+            width: 80px
+            height: 80px
+            position: absolute
+            bottom: 200px
+            right: 320px
+    .corner-lower-contour
+        img
+            width: 700px
+            height: 800px
+            position: absolute
+            bottom: -665px
+            right: -13px
+            z-index: 100
+    .corner-lower-form
+        .corner-lower-form-img
+            width: 600px
+            height: 700px
+            position: absolute
+            bottom: -220px
+            right: -254px
+            z-index: 100
 
+.wrapper-medium
+    width: 100vw
+    height: 100vh
+    //background-color: rgb(9, 40, 82)
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
     .main-title
-        font-size: 320px
-        font-family: 'Chloe'
-        font-weight: 400
-        text-shadow: rgba(0, 0, 0, 0.4) 14px 14px 0px
-        margin: 0
-
+        font-family: 'Garet-Heavy'
+        color: #ffffff
+        font-size: 80px
+        z-index: 103
+        overflow: hidden
+        span
+            opacity: 0
+            position: relative
     .main-subtitle
-        font-size: 90px
-        font-family: 'IBM Plex Sans Thai Looped Regular'
-        margin: 0
-        text-shadow: rgba(0, 0, 0, 0.325) 0px 9.01204px 38.3012px
-        -webkit-text-stroke: 3.28167px rgba(191, 191, 191, 0.281)
-        opacity: 0
+        font-family: 'Garet-Book'
+        font-weight: 600
+        color: #ffffff
+        font-size: 20px
+        width: 500px
+        height: 50px
+        background-color: #ff6b73
+        display: flex
+        justify-content: center
+        align-items: center
+        border-radius: 45px
+        z-index: 103
+        overflow: hidden
+
+// Styles for large screens
+.background-container-large
+    width: 100vw
+    height: 100vh
+    position: absolute
+    overflow: hidden
+    .corner-upper-form
+        img
+            width: 600px
+            height: 700px
+            position: absolute
+            top: -340px
+            left: -283px
+            z-index: 101
+    .corner-upper-contour
+        img
+            width: 700px
+            height: 800px
+            position: absolute
+            top: -656px
+            left: -15px
+            z-index: 100
+    .upper-big-bubble
+        img
+            width: 150px
+            height: 150px
+            position: absolute
+            top: 120px
+            left: 100px
+            z-index: 102
+    .upper-little-bubble
+        img
+            width: 80px
+            height: 80px
+            position: absolute
+            top: 180px
+            left: 350px
+    .center-form
+        img
+            width: 700px
+            height: 200px
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%) rotate(-15deg)
+            z-index: 100
+    .lower-big-bubble
+        img
+            width: 150px
+            height: 150px
+            position: absolute
+            bottom: 85px
+            right: 80px
+            z-index: 102
+    .lower-little-bubble
+        img
+            width: 80px
+            height: 80px
+            position: absolute
+            bottom: 200px
+            right: 320px
+    .corner-lower-contour
+        img
+            width: 700px
+            height: 800px
+            position: absolute
+            bottom: -665px
+            right: -13px
+            z-index: 100
+    .corner-lower-form
+        .corner-lower-form-img
+            width: 600px
+            height: 700px
+            position: absolute
+            bottom: -220px
+            right: -254px
+            z-index: 100
+
+.wrapper-large
+    width: 100vw
+    height: 100vh
+    //background-color: rgb(9, 40, 82)
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    .main-title
+        font-family: 'Garet-Heavy'
+        color: #ffffff
+        font-size: 110px
+        z-index: 103
+        overflow: hidden
+        span
+            opacity: 0
+            position: relative
+    .main-subtitle
+        font-family: 'Garet-Book'
+        font-weight: 600
+        color: #ffffff
+        font-size: 30px
+        width: 600px
+        height: 65px
+        background-color: #ff6b73
+        display: flex
+        justify-content: center
+        align-items: center
+        border-radius: 45px
+        z-index: 103
+        overflow: hidden
+
+// Styles for extra large screens
+.background-container-xlarge
+    width: 100vw
+    height: 100vh
+    position: absolute
+    overflow: hidden
+    .corner-upper-form
+        img
+            width: 800px
+            height: 900px
+            position: absolute
+            top: -462px
+            left: -283px
+            z-index: 101
+    .corner-upper-contour
+        img
+            width: 800px
+            height: 900px
+            position: absolute
+            top: -662px
+            left: 83px
+            z-index: 100
+    .upper-big-bubble
+        img
+            width: 200px
+            height: 200px
+            position: absolute
+            top: 140px
+            left: 100px
+            z-index: 102
+    .upper-little-bubble
+        img
+            width: 100px
+            height: 100px
+            position: absolute
+            top: 240px
+            left: 500px
+    .center-form
+        img
+            width: 900px
+            height: 300px
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%) rotate(-15deg)
+            z-index: 100
+    .lower-big-bubble
+        img
+            width: 200px
+            height: 200px
+            position: absolute
+            bottom: 140px
+            right: 100px
+            z-index: 102
+    .lower-little-bubble
+        img
+            width: 100px
+            height: 100px
+            position: absolute
+            bottom: 240px
+            right: 500px
+    .corner-lower-contour
+        img
+            width: 800px
+            height: 900px
+            position: absolute
+            bottom: -721px
+            right: 83px
+            z-index: 100
+    .corner-lower-form
+        .corner-lower-form-img
+            width: 800px
+            height: 900px
+            position: absolute
+            bottom: -321px
+            right: -283px
+            z-index: 100
+
+.wrapper-xlarge
+    width: 100vw
+    height: 100vh
+    //background-color: rgb(9, 40, 82)
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    .main-title
+        font-family: 'Garet-Heavy'
+        color: #ffffff
+        font-size: 140px
+        z-index: 103
+        overflow: hidden
+        span
+            opacity: 0
+            position: relative
+    .main-subtitle
+        font-family: 'Garet-Book'
+        font-weight: 600
+        color: #ffffff
+        font-size: 35px
+        width: 700px
+        height: 80px
+        background-color: #ff6b73
+        display: flex
+        justify-content: center
+        align-items: center
+        border-radius: 45px
+        z-index: 103
+        overflow: hidden
 
