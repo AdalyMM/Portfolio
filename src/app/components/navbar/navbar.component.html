@@ -41,8 +41,8 @@
         <button class="contact-button" [routerLink]="['contact']">
             <p>Contacto</p>
         </button>
-        <button class="cv-button">
-            <p><img class="download-icon" src="assets/icons/download_icon.png" (click)="openCV()"> CV</p>
+        <button class="cv-button" (click)="openCV()">
+            <p><img class="download-icon" src="assets/icons/download_icon.png"> CV</p>
         </button>
     </div>
 </nav>
