@@ -4,6 +4,7 @@ import { SharedDataService } from 'src/app/services/shared-data.service';
 import { Breakpoints } from '@angular/cdk/layout';
 import { ImagePreloadService } from 'src/app/services/image-preload.service';
 import { Subscription } from 'rxjs';
+import { SupabaseService } from 'src/app/services/supabase.service';
 
 @Component({
   selector: 'app-navbar',
@@ -22,13 +23,15 @@ export class NavbarComponent implements OnInit, AfterViewInit, OnDestroy {
   suscriptions: Subscription[] = [];
   private images: string[] = [];
   gsapAnimations: any[] = [];
+  private cvUrl: string | null = null;
 
   constructor(
     private sharedDataService: SharedDataService,
-    private imagePreloadService: ImagePreloadService
+    private imagePreloadService: ImagePreloadService,
+    private supabaseService: SupabaseService
   ) { }
 
-  ngOnInit(): void {
+  async ngOnInit() {
     this.sharedDataService.currentBreakpoints.subscribe((values) => {
       this.breakpoints['XSmall'] = values[Breakpoints.XSmall];
       this.breakpoints['Small'] = values[Breakpoints.Small];
@@ -36,6 +39,7 @@ export class NavbarComponent implements OnInit, AfterViewInit, OnDestroy {
       this.breakpoints['Large'] = values[Breakpoints.Large];
       this.breakpoints['XLarge'] = values[Breakpoints.XLarge];
     });
+    this.cvUrl = await this.supabaseService.getSignedUrl('CV-ATS.pdf');
   }
 
   ngAfterViewInit(): void {
@@ -87,6 +91,8 @@ export class NavbarComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   openCV(): void {
-    window.open('../../../assets/cv/CV-ATS.pdf', '_blank');
+    if (this.cvUrl != null){
+      window.open(this.cvUrl, '_blank');
+    }
   }
 }
