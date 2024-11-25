@@ -26,7 +26,6 @@ export class ProjectInfoComponent implements OnInit {
     'en los temas de salud y educación sexual, lo presentamos en nuestra escuela para ser evaluados en las últimas materias del ' +
     'semestre. Está elaborado utilizando HTML, CSS y Javascript, así como NodeJS para un poco de procesamiento de datos y en ' +
     'su momento utilizamos una base de datos en MySQL.');
-    console.log(this.index);
   }
 
   ngOnInit(): void {

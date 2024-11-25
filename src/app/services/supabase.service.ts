@@ -26,7 +26,6 @@ export class SupabaseService {
     const { data, error } = await this.supabase.storage
       .from('Personal Archives')
       .createSignedUrl(path, 60 * 60); // 1 hora
-    console.log(data?.signedUrl);
     if (error) {
       console.error('Error generating signed URL', error);
       return null;

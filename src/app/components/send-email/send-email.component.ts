@@ -16,7 +16,6 @@ export class SendEmailComponent implements OnInit {
   }
 
   sendEmail(): void {
-    console.log('Enviando correo a:', this.recipient, 'con el mensaje:', this.message);
     this.closeDialog();
   }
 
